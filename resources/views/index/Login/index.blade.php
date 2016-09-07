@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        @include('home.Public.header')
+        @include('index.Public.header')
         <title>用户登录</title>
         <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
         <link href="frontend/css/index.css" type="text/css" rel="stylesheet"/>
     </head>
 
     <body>
-        @include('home.Public.main_nav')
+        @include('index.Public.main_nav')
         <!--导航栏开始-->  
         <!--导航栏结束-->
         <div class="denglu_bg">
@@ -42,6 +42,6 @@
                 <!--左边栏结束-->             
             </div>
         </div>
-        @include('home.Public.footer')
+        @include('index.Public.footer')
     </body>
 </html>
