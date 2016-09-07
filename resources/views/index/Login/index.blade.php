@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        @include('index.Public.header')
+        @include('home.Public.header')
         <title>用户登录</title>
         <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
         <link href="frontend/css/index.css" type="text/css" rel="stylesheet"/>
     </head>
 
     <body>
-        @include('index.Public.main_nav')
+        @include('home.Public.main_nav')
         <!--导航栏开始-->  
         <!--导航栏结束-->
         <div class="denglu_bg">
@@ -28,7 +28,7 @@
                             
                             <li><input placeholder="输入验证码" class="yanzhengma" name="verify"/><img class="verify-code" src="" style=" margin-left:10px; vertical-align:middle;" title="验证码"/><b id="verify1"></b></li>
                         </ul>
-                        <p><a href="">忘记密码？</a><a href="">免费注册</a></p>
+                        <p><a href="">忘记密码？</a><a href="{{url('index/')}}">免费注册</a></p>
                         <div class="denglu_but_con"><input class="denglu_but" type="submit" value="&nbsp;"/></div>
                     </form>
                     <!--<div class="denglu_but_con1" style=" float:left; width:80px; height:25px; line-height:25px;  color:#FFF; margin-top:15px; margin-left:30px; padding-bottom:5px; padding-top:5px; background:#999; display:inline;">
@@ -42,6 +42,6 @@
                 <!--左边栏结束-->             
             </div>
         </div>
-        @include('index.Public.footer')
+        @include('home.Public.footer')
     </body>
 </html>

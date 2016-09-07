@@ -15,7 +15,7 @@
                 <dl class="zjxl"  style="display: block">  
                     <dt> 
                     <dd class="d-cur"><a href="">我的投资</a></dd>
-                    <dd class="d-cur"<?php endif;?>><a href="">投资统计</a></dd>
+                    <dd class="d-cur"><a href="">投资统计</a></dd>
                     </dt>
                 </dl>
             </li>
