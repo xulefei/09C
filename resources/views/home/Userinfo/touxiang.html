@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>头像上传</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <link href="__PUBLIC__/frontend/css/base.css" type="text/css"  rel="stylesheet" />
+        <link href="__PUBLIC__/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+            #TB_closeAjaxWindow{ width:48px; height:10px; overflow:hidden;}
+        </style>
+    </head>
+    <body>
+        <div id="myOnPageContent">
+            <div class="touxiang_tc">
+                <dl>
+                    <dt><img src="__PUBLIC__/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传头像"/>上传头像</dt>
+                    <dd><b>上传说明：</b></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、图片的尺寸<span>小于1.5M。</span>格式为：<span>jpg、png、gif。</span></dd> 
+                    <dd>&nbsp;</dd>  
+                    <dd><b>上传头像：</b></dd> 
+                </dl>
+                <form enctype="multipart/form-data"  method="post" id="upForm" action="{:U('userinfo/upload')}"> 
+                    <div id="altContent"></div>
+                    <input type="hidden" name="path" id="path" />
+                </form>
+                <div class="jindutiao">&nbsp;</div>
+            </div>
+            <div class="jinggao">
+                <span>警告：</span> 金融宝是一个注重诚信的网络平台。如果我们发现您上传的资料是伪造或有人工修改痕迹，金融宝会将你加入系统黑名单，永久取消您在金融宝的借款资格。
+            </div>
+        </div>
+        <script type="text/javascript" src="__PUBLIC__/frontend/vendor/FaustCplus/swfobject.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/frontend/vendor/FaustCplus/requestTicket.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".put_tc").click(function() {
+                    $(".jindutiao").show();
+                });
+            });
+
+            function submitForm($path) {
+                $("#path").val($path);
+                $("#altContent").hide();
+                $("#upForm").submit();
+                $("#TB_closeWindowButton").trigger('click');
+            }
+            function uploadevent(status) {
+
+                if (status && status !== -1) {
+                    alert('头像上传成功！');
+                    submitForm(status);
+                } else if (status === -2) {
+                    alert('头像上传失败!');
+                    window.location.href = "#";
+                } else {
+                    $("#TB_closeWindowButton").trigger('click');
+                }
+//                status += '';
+//                switch (status) {
+//                    case '1':
+//                        alert('upload succeed!');
+//                        var time = new Date().getTime();
+//                        document.getElementById('avatar_priview').innerHTML = "Avatar Priview: <img src='php/avatar_1.jpg?" + time + "'/> <br/> Source Image: <img src='php/avatar_2.jpg?" + time + "'/>";
+//                        break;
+//                    case '2':
+//                        if (confirm('js call upload')) {
+//                            return 1;
+//                        } else {
+//                            return 0;
+//                        }
+//                        break;
+//                    case '-1':
+//                        alert('cancel!');
+//                        window.location.href = "#";
+//                        break;
+//                    case '-2':
+//                        alert('upload failed!');
+//                        window.location.href = "#";
+//                        break;
+//                    default:
+//                        alert(typeof (status) + ' ' + status);
+//                }
+            }
+            var flashvars = {
+                "jsfunc": "uploadevent",
+                "imgUrl": "http://tupian.jrbbank.com/images/1.jpg",
+                "pid": "75642723",
+                "uploadSrc": true,
+                "showBrow": true,
+                "showCame": true,
+                "uploadUrl": "http://tupian.jrbbank.com/saveavater.php?action=uploadavatar"
+            };
+            var params = {
+                menu: "false",
+                scale: "noScale",
+                allowFullscreen: "true",
+                allowScriptAccess: "always",
+                wmode: "transparent",
+                bgcolor: "#FFFFFF"
+            };
+            var attributes = {
+                id: "FaustCplus"
+            };
+            swfobject.embedSWF("__PUBLIC__/frontend/vendor/FaustCplus/FaustCplus.swf", "altContent", "650", "450", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+        </script>
+    </body>
+</html>

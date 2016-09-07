@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <include file="Public:header" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="__PUBLIC__/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+    </head>
+
+    <body>
+        <include file="Public:main_nav" />
+        <div class="yinying_jrb2"></div>
+        <!--贷款中心开始-->
+        <div class="zhutineirong">
+            <!--筛选开始-->
+            <div class="woyaojiekuan_t">
+                <div class="woyaojiekuan_tl2">
+                    <dl> 
+                        <dt><b>{$repay[title]}</b><span>{$user[u_username]}</span></dt>
+                        <dd>
+                            <ul>
+                                <li>标的总额<span style="color:#F00; font-size:24px;">{$repay[money]}元</span></li>
+                                <li>标的类型<span><img <?php if($repay['type'] == 2):?>title="有抵押标" src="__PUBLIC__/frontend/images/shiwu_tubiao.png" <?php else:?>title="无抵押信用标" alt="无抵押信用标" src="__PUBLIC__/frontend/images/xinyong_tubiao.png"<?php endif;?>/></span></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>
+                                <?php if($repay[status] != 4 && $repay['is_show'] == 1):?>
+                                <li>下次还款日期<span>审核中！</span></li>
+                                <?php elseif($repay[status] != 4 && $repay['is_show'] == 2):?>
+                                <li>下次还款日期<span>审核不通过！</span></li>
+                                <?php elseif($repay[repay_status] == 3 && $repay[status] != 4):?>
+                                <li>下次还款日期<span>筹款中！</span></li>
+                                <?php elseif($repay[status] == 4):?>
+                                <li>下次还款日期<span>已流标！</span></li>
+                                <?php else:?>
+                                <li>下次还款日期<span><?php if($repay['repay_status'] == 2):?> 已还清 ！<?php else:?>{$repay.update_time|forDate}<?php endif;?></span></li>
+                                <?php endif;?>
+                                <li>还款期限<span style="color:#F00;">{$repay[expires]}个月</span></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>
+                                <li>还款方式<span>  <?php if($repay[refund_method]==1):?>
+                                        按月分期还款
+                                        <?php else:?>
+                                        到期还本按月还息
+                                        <?php endif;?></span>
+                                    <a href="#" title="还款期内，每月偿还同等数额的借款(包括本金和利息)"><img src="__PUBLIC__/frontend/images/wenhao_info.gif"  title="查看更多"/></a>
+                                </li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+                    <div class="tittle_jrb002"><b>借款说明</b></div>
+                    <div class="jiekuanshuoming_kj" style="text-align: left;"><?php echo str_replace('借款理由：','<br /><br /><span style="color:red;">借款理由：</span>',str_replace('借款用途：','<span style="color:red;">借款用途：</span>',str_replace('还款计划：','<br /><br /><span style="color:red;">还款计划：</span>',$repay['describe']))); ?></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="woyaojiekuan_tr2">
+                    <div class="tittle_xqkj"><b>投标</b><span><?php echo $_SESSION['username'];?></span></div>
+                    <form action="{:U('Repayment/doPost')}" method="post">
+                        <input type="hidden" value="{$repay.id}" name="objId" />
+                        <ul>
+                            <li>可用金额<p>{$userdata[fund]|num_format}元</p></li>
+                            <li>账户余额<a href="{:U('charge/show')}">（充值）</a><p>{$userdata[fund]+$userdata[lock_fund]|num_format}元</p></li>
+                        </ul>
+                        <?php if($repay[repay_status] == 1):?>
+                        <input type="submit" value="还&nbsp;&nbsp;款"  class="touzi_kj">
+                            <?php elseif($repay[repay_status] == 2):?>
+                            <div class="yimanbiao_kj">已&nbsp;&nbsp;还&nbsp;&nbsp;清</div>
+                            <?php elseif($repay[status] == 4):?>
+                            <div class="yimanbiao_kj">已&nbsp;&nbsp;流&nbsp;&nbsp;标</div>
+                            <?php elseif($repay[is_show] == 1):?>
+                            <div class="yimanbiao_kj">审&nbsp;&nbsp;核&nbsp;&nbsp;中</div>     
+                            <?php elseif($repay[is_show] == 2):?>
+                            <div class="yimanbiao_kj">审核未通过</div>     
+                            <?php else:?>
+                            <div class="yimanbiao_kj">筹&nbsp;&nbsp;款&nbsp;&nbsp;中</div>     
+                            <?php endif;?>
+                    </form>
+                </div>
+                <div class="chengkai" style=" float:left; width:1000px; height:50px">&nbsp;</div>
+                <div class="clear"></div> 
+            </div>
+            <!--筛选结束-->
+            <!--投资列表开始-->
+            <div class="woyaojiekuan_b2">
+                <!--右边栏开始-->
+                <div class="tab">
+                    <a href="{:U('Repayment/index',array('id'=>$repay['id']))}"><div  id="tz">还款记录</div></a><a href="javascript:void(0);"><div class="cur" id="sx">加入记录</div></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="xiangqing_kj" id="right_top2">
+                    <?php if($_SESSION['uid']==""):?>
+                    <div class="jiekuanxiangqing_lkj" align="center">
+                        请 <a href="{:U('Login/index')}" style="color:#ED994B">登录</a> 或 <a href="{:U('register/index')}" style="color:#ED994B">注册</a> 后查看</div>
+                    <?php else:?>
+                    <div class="jiekuanxiangqing_lkj">
+                        <dl>
+                            <dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投标人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投标金额&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投标时间</dt>
+                            <foreach name="bidRecord" item="vo">
+                                <dd>
+                                    <ul>
+                                        <li>{$vo.username}</li>
+                                        <li>{$vo.money}元</li>
+                                        <li style="width:150px;">{$vo.create_time|formatDate}</li>
+                                    </ul>
+                                </dd>
+                            </foreach>
+                            <div align="center">{$page}</div>
+                        </dl>
+                    </div>
+                    <div class="jiekuanxiangqing_rkj">
+                        <div class="tittle_xqkj">投标总额<p>{$sum}<span>元</span></p></div>
+                        <div class="tittle_xqkj">加入人次<p>{$p_num}人<span>次</span></p></div>
+                    </div>
+                    <?php endif;?>
+                    <div class="clear"></div>
+                </div>
+                <div class="liuchengtu_jk">
+                    <ul>
+                        <li><span>1.账户充值</span><img src="__PUBLIC__/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>2.挑选投资项目</span><img src="__PUBLIC__/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>3.投标后查看更多信息</span><img src="__PUBLIC__/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>4.有两个小时考虑时间是否放弃投标</span><img src="__PUBLIC__/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>5.等待借款人确认</span><img src="__PUBLIC__/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>6.轻松赚取收益</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--投资列表结束-->
+            <div class="clear"></div>    
+        </div>
+        <!--贷款中心结束-->
+        <include file="Public:footer" />
+    </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <include file="Public:header" />
+    <link href="__PUBLIC__/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+    <link href="__PUBLIC__/frontend/css/thickbox.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .J_view{ display:none;}
+        .hide{ display:none}
+        .info{font-weight:normal}
+        .tscg{ color:#a9a9a9;display:none}
+    </style>
+</head>
+
+<body>
+    <!--导航栏开始-->
+<include file="Public:main_nav" />
+<div class="yinying_jrb2"></div>
+<!--导航栏结束-->
+<div class="zhutineirong">
+    <!--左边栏开始-->
+    <include file="Public:left_nav" />
+    <!--左边栏结束-->  
+
+    <!--右边栏开始-->
+    <div class="right">
+        <div class="right_top2">
+            <div class="tittle_kj">
+                <div class="tittle_lkj">个人基础信息<span style=" color:#f00; font-size:14px; margin-left:55px;">（请完善个人信息标*为必填项，完善后才能申请借款）</span></div>
+                <div class="tittle_rkj"><a href="javascript:void(0)" class="show jrb_but03">修改信息</a><a href="javascript:void(0)" class="hide jrb_but03">取消修改</a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="gerenxinxi_kj">
+                <div class="gerenxinxi_lkj">
+                    <?php if($user[u_avatar]):?>
+                    <img src="__UPLOAD__/avatar/{$user[u_avatar]}" width="96px" height="96px"  title="头像"/> 
+                    <?php else:?>
+                    <img src="__PUBLIC__/frontend/images/myjrb_touxiang.jpg" width="96px" height="96px" title="头像"/> 
+                    <?php endif;?>
+                    <!--头像修改-->
+                    <p class="J_view tscg" style="width:96px; height:30px; line-height:30px; background-color:#3d89b4; " align="center"><a href="{:U('Userinfo/touxiang')}?placeValuesBeforeTB_=savedValues&TB_alert=true&height=700&width=660&modal=false" class="thickbox" type="button" style="color:#fff">更改头像</a></p>
+
+                </div>
+                <form method="post"  action="" id="myForm">
+                    <div class="gerenxinxi_rkj">
+                        <ul>
+                            <li><span>用&nbsp;&nbsp;户&nbsp;&nbsp;名</span><span style=" text-align:left"><?php  echo $_SESSION['username']?></span></li>
+                            <li><span>真实姓名</span><span style="width:250px; text-align:left">{$userinfo['real_name']}</span><div class="renzheng_kj"></li>
+                            <li><span>身份证号</span><span style="width:250px; text-align:left"><?php echo substr($userinfo[id_card],0,4).'**** **** **** '.substr($userinfo[id_card],-4);?></span><div class="renzheng_kj">
+                                    <?php if($auth[status]==3):?>
+                                    <img src="__PUBLIC__/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已认证"/>
+                                    已认证
+                                    <?php else:?>
+                                    <a href="{:U('Authhome/index')}"><img src="__PUBLIC__/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;"  title="去认证"/>去认证</a>
+
+                                    <?php endif;?>
+
+                                </div></li>
+                            <li><span>手机号码</span><span><?php echo substr($user[u_phone],0,3).'****'.substr($user[u_phone],-4);?></span><div class="renzheng_kj">
+                                    <?php if($user['u_phone_status']==2):?>
+                                    <img src="__PUBLIC__/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
+                                    已绑定
+                                    <?php else:?>
+                                    <a href="{:U('Authhome/index')}"><img src="__PUBLIC__/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
+
+                                    <?php endif;?>
+                                </div></li>
+                            <li><span>邮箱地址</span><span><?php echo substr($user[u_email],0,3).'****'.substr($user[u_email],-7);?></span>
+                                <div class="renzheng_kj">
+                                    <?php if($user['u_email_status']==2):?>
+                                    <img src="__PUBLIC__/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
+                                    已绑定
+                                    <?php else:?>
+                                    <a href="{:U('Authhome/index')}"><img src="__PUBLIC__/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
+
+                                    <?php endif;?>
+                                </div></li>
+                            <li><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span>
+                                <b class="info">
+                                    <?php if($userinfo['sex']==1):?>男<?php else:?>女<?php endif;?>
+                                </b>
+
+                                <select name="sex"  class="biaodan_01 J_view">
+                                    <option <?php if($userinfo['sex']==1):?>selected<?php endif;?> value="1">男</option>
+                                    <option <?php if($userinfo['sex']==2):?>selected<?php endif;?> value="2">女</option>
+                                </select>
+                            </li>
+                            <li><span>出生日期</span><b class="info">{$userinfo['birthday']}</b><input type="text"  value="{$userinfo['birthday']}" name="birthday" class="biaodan_02 Wdate J_view" onClick="WdatePicker();"/></li>
+                            <li><span><b style="color:#F00;">*</b>最高学历</span><b class="info">{$json.schooling}</b>
+                                <select name="schooling" id="graduation" class="biaodan_02 J_view">
+                                    <option value="" >请选择</option>
+                                    <option <?php if($json['schooling']=="高中或以下"):?>selected<?php endif;?> value="高中或以下">高中或以下</option>
+                                    <option <?php if($json['schooling']=="大专"):?>selected<?php endif;?> value="大专">大专</option>
+                                    <option <?php if($json['schooling']=="本科"):?>selected<?php endif;?> value="本科">本科</option>
+                                    <option <?php if($json['schooling']=="研究生或以上"):?>selected<?php endif;?> value="研究生或以上" >研究生或以上</option>
+                                </select>
+                            </li>
+                            <li><span><b style="color:#F00;">*</b>毕业院校</span><b class="info">{$json.school}</b><input  name="school"  value="{$json.school}" class="biaodan_03 J_view"/></li>
+                            <li><span>婚姻状况</span><b class="info">{$json.Maritalstatus}</b><b class="J_view"><input  name="Maritalstatus"  value="已婚" type="radio" class="biaodan_05"  style="border:0"<?php if($json['Maritalstatus']=="已婚"):?>checked="checked"<?php endif;?>/>已婚<input  name="Maritalstatus"  type="radio" class="biaodan_05"  value="未婚"  style="border:0"<?php if($json['Maritalstatus']=="未婚"):?>checked="checked"<?php endif;?>/>未婚<input  name="Maritalstatus"  type="radio"  value="离异" class="biaodan_05"  style="border:0"<?php if($json['Maritalstatus']=="离异"):?>checked="checked"<?php endif;?>/>离异<input  name="Maritalstatus"  type="radio" value="丧偶" class="biaodan_05" style="border:0"<?php if($json['Maritalstatus']=="丧偶"):?>checked="checked"<?php endif;?>/>丧偶</b></li>
+                            <li class="J_view">
+                                <span><b style="color:#F00;">*</b>居住省市</span>
+                                <select class="biaodan_02 J_view" id="province" name="province">
+                                    <option value="">请选择</option>
+                                    <?php foreach($provinces AS $key=>$vo):?>
+                                    <option <?php if($json['Wrokcityp'] == $key):?>selected="selected"<?php endif;?> value="{$key}">{$vo}</option>
+                                    <?php endforeach;?>
+                                </select>省
+                                <select class="biaodan_02 J_view" name="city" id="city">
+                                    <option value="">请选择</option>
+                                    <?php foreach($cities AS $key=>$vo):?>
+                                    <option <?php if($json['Wrokcityc'] == $key):?>selected="selected"<?php endif;?> value="{$key}">{$vo}</option>
+                                    <?php endforeach;?>
+                                </select>市/区
+                            </li>
+                            <li>
+                                <span><b style="color:#F00;">*</b>详细地址</span>
+                                <b class="info">{$provinces[$json[Wrokcityp]]}{$cities[$json[Wrokcityc]]}{$userinfo[address]}</b>
+                                <input value="{$userinfo[address]}" name="LiveAddress"  class="biaodan_04 J_view"/>
+                            </li>
+                            <li><span>公司行业</span><b class="info">{$json.Companyindustry}</b>
+                                <select name="Companyindustry" id="officeDomain" class="biaodan_02 J_view">
+                                    <option value="" selected>请选择</option>
+                                    <option value="制造业" <?php if($json['Companyindustry']=="制造业"):?>selected<?php endif;?>>制造业</option>
+                                    <option value="IT" <?php if($json['Companyindustry']=="IT"):?>selected<?php endif;?>>IT</option>
+                                    <option value="政府机关" <?php if($json['Companyindustry']=="政府机关"):?>selected<?php endif;?>>政府机关</option>
+                                    <option value="媒体/广告" <?php if($json['Companyindustry']=="媒体/广告"):?>selected<?php endif;?>>	媒体/广告</option>
+                                    <option value="零售/批发" <?php if($json['Companyindustry']=="零售/批发"):?>selected<?php endif;?>>	零售/批发</option>
+                                    <option value="教育/培训" <?php if($json['Companyindustry']=="教育/培训"):?>selected<?php endif;?>>教育/培训	</option>
+                                    <option value="公共事业" <?php if($json['Companyindustry']=="公共事业"):?>selected<?php endif;?>>	公共事业</option>
+                                    <option value="交通运输业" <?php if($json['Companyindustry']=="交通运输业"):?>selected<?php endif;?>>交通运输业</option>
+                                    <option value="房地产业" <?php if($json['Companyindustry']=="房地产业"):?>selected<?php endif;?>>	房地产业</option>
+                                    <option value="能源业" <?php if($json['Companyindustry']=="能源业"):?>selected<?php endif;?>>	能源业</option>
+                                    <option value="金融/法律" <?php if($json['Companyindustry']=="金融/法律"):?>selected<?php endif;?>>	金融/法律</option>
+                                    <option value="餐饮/旅馆业" <?php if($json['Companyindustry']=="餐饮/旅馆业"):?>selected<?php endif;?>>	餐饮/旅馆业</option>
+                                    <option value="医疗/卫生/保健" <?php if($json['Companyindustry']=="医疗/卫生/保健"):?>selected<?php endif;?>>	医疗/卫生/保健</option>
+                                    <option value="建筑工程" <?php if($json['Companyindustry']=="建筑工程"):?>selected<?php endif;?>>	建筑工程	</option>
+                                    <option value="农业" <?php if($json['Companyindustry']=="农业"):?>selected<?php endif;?>>	农业	</option>
+                                    <option value="娱乐服务业" <?php if($json['Companyindustry']=="娱乐服务业"):?>selected<?php endif;?>>			娱乐服务业</option>
+                                    <option value="体育/艺术" <?php if($json['Companyindustry']=="体育/艺术"):?>selected<?php endif;?>>		体育/艺术</option>
+                                    <option value="公益组织" <?php if($json['Companyindustry']=="公益组织"):?>selected<?php endif;?>>	公益组织</option>  
+                                    <option value="其它" <?php if($json['Companyindustry']=="其它"):?>selected<?php endif;?>>		其它</option>
+
+                                </select>
+                            </li>
+                            <li><span>公司规模</span><b class="info">{$json.Companyscale}</b>
+                                <select name="Companyscale" id="officeScale" class="biaodan_02 J_view">
+                                    <option value="">请选择</option>
+                                    <option value="10人以下" <?php if($json['Companyscale']=="10人以下"):?>selected<?php endif;?>>
+                                            10人以下
+                                </option>
+
+                                <option value="10-100人" <?php if($json['Companyscale']=="10-100人"):?>selected<?php endif;?>>
+                                        10-100人
+                            </option>
+
+                            <option value="100-500人" <?php if($json['Companyscale']=="100-500人"):?>selected<?php endif;?>>
+                                    100-500人
+                        </option>
+
+                        <option value="500人以上" <?php if($json['Companyscale']=="500人以上"):?>selected<?php endif;?>>
+                                500人以上
+                    </option>
+
+                </select>
+            </li>
+            <li>
+                <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</span><b class="info">{$json.Office}</b>
+                <select name="Office" id="salary" class="biaodan_02 J_view">
+                    <option value="">请选择</option>
+                    <option value="公司总裁" <?php if($json['Office']=="公司总裁"):?>selected<?php endif;?>>公司总裁</option>
+                    <option value="公务员" <?php if($json['Office']=="公务员"):?>selected<?php endif;?>>公务员</option>
+                    <option value="部门经理" <?php if($json['Office']=="部门经理"):?>selected<?php endif;?>>部门经理</option>
+                    <option value="普通职员" <?php if($json['Office']=="普通职员"):?>selected<?php endif;?>>普通职员</option>
+                    <option value="自由职业者" <?php if($json['Office']=="自由职业者"):?>selected<?php endif;?>>自由职业者</option>
+                </select>
+                <!--<input  name="Office"  value="{$json.Office}" class="biaodan_03 J_view"/>-->
+            </li>
+            <li><span><b style="color:#F00;">*</b>月&nbsp;&nbsp;收&nbsp;&nbsp;入</span><b class="info">{$json.Monthlyincome}</b>
+                <select name="Monthlyincome" id="salary" class="biaodan_02 J_view">
+                    <option value="">请选择</option>
+                    <option value="1000元以下" <?php if($json['Monthlyincome']=="1000元以下"):?>selected<?php endif;?>>1000元以下</option>
+                    <option value="1001-2000元" <?php if($json['Monthlyincome']=="1001-2000元"):?>selected<?php endif;?>>1001-2000元</option>
+                    <option value="2000-5000元" <?php if($json['Monthlyincome']=="2000-5000元"):?>selected<?php endif;?>>2000-5000元</option>
+                    <option value="5000-10000元" <?php if($json['Monthlyincome']=="5000-10000元"):?>selected<?php endif;?>>5000-10000元</option>
+                    <option value="10000-20000元" <?php if($json['Monthlyincome']=="10000-20000元"):?>selected<?php endif;?>>10000-20000元</option>
+                    <option value="20000-50000元" <?php if($json['Monthlyincome']=="20000-50000元"):?>selected<?php endif;?>>20000-50000元</option>
+                    <option value="50000元以上" <?php if($json['Monthlyincome']=="50000元以上"):?>selected<?php endif;?>>50000元以上</option>
+                </select>
+            </li> 
+            <li class="J_view" style=" margin-top:30px;"><span>&nbsp;</span><input type="button" value="提&nbsp;&nbsp;交"  class="jrb_but02"/><span class="tscg" style="margin-left:10px;">成功保存!</span></li>  
+        </ul>
+    </div>
+</form>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<!--右边栏结束-->
+<div class="clear"></div>
+</div>
+<include file="Public:footer"/>
+<script src="__PUBLIC__/frontend/js/thickbox-compressed.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/frontend/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+                                $(function() {
+                                    $("#province").change(function() {
+                                        $.post('{:U("Global/ajaxGetArea")}', {
+                                            area_id: $(this).val()
+                                        }, function(data, status) {
+                                            $("#city").empty();
+                                            $("#city").append(data);
+                                        });
+                                    });
+
+                                    $(".jrb_but02").click(function() {
+                                        $.post('{:U("Userinfo/add")}', $("#myForm").serialize(), function(str) {
+                                            str = $.trim(str);
+                                            if (str === '1') {
+                                                $(".tscg").show();
+                                                setTimeout(function() {
+                                                    location.reload();
+                                                }, 1000);
+                                            } else {
+                                                $(".tscg").show();
+                                                setTimeout(function() {
+                                                    location.reload();
+                                                }, 1000);
+                                            }
+                                        });
+                                    });
+
+                                    $(".jrb_but02").click(function() {
+                                        $.post('{:U("Userinfo/add")}', $("#myForm").serialize(), function(str) {
+                                            str = $.trim(str);
+                                            if (str === '1') {
+                                                $(".tscg").show();
+                                                setTimeout(function() {
+                                                    location.reload();
+                                                }, 1000);
+                                            } else {
+                                                $(".tscg").show();
+                                                setTimeout(function() {
+                                                    location.reload();
+                                                }, 1000);
+                                            }
+                                        });
+                                    });
+                                });
+                                $(".show").click(function() {
+                                    $(".J_view").show();
+                                    $(".show").hide();
+                                    $(".hide").show();
+                                    $(".info").hide();
+                                });
+                                $(".hide").click(function() {
+                                    $(".J_view").hide();
+                                    $(".show").show();
+                                    $(".hide").hide();
+                                    $(".info").show();
+                                });
+</script>
+</body>
+</html>

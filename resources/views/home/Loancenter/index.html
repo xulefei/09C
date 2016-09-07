@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <include file="Public:header" />
+    <!--引入样式文件-->
+    <link href="__PUBLIC__/frontend/css/index.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+    <link href="__PUBLIC__/frontend/vendor/simplePagination/simplePagination.css" type="text/css"  rel="stylesheet" />
+    <!--引入样式文件结束-->
+    <style>
+        .cur{
+            background:#666;
+        }
+        .cur a{
+            color:#FFF;
+        }
+    </style>
+</head>
+<body>
+<include file="Public:main_nav" />
+<div class="yinying_jrb2"></div>
+<!--贷款中心开始-->
+<div class="zhutineirong">
+    <!--筛选开始-->
+    <div class="woyaojiekuan_t">
+        <div class="woyaojiekuan_tl">
+            <div class="shaixuan">
+                <ul>
+                    <li style=" font-size:18px; background:none">筛选投资项目</li>
+                    <li style="background:#666; color:#FFF">多选</li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="shaixuan">
+                <dl>
+                    <dt class="li_1">标的类型：</dt>
+                    <dd><ul class="obj-type">                
+                            <li J_data="0" class="cur"><a href="javascript:void(0);"  >不限</a></li>
+                            <li J_data="2"><a  href="javascript:void(0);"  >有抵押标</a></li>
+                            <li J_data="1"><a  href="javascript:void(0);"  >无抵押标</a></li>                   
+                        </ul></dd>
+                </dl>
+                <div class="clear"></div>
+            </div>
+            <div class="shaixuan">
+                <dl>
+                    <dt class="li_1">借款期限：</dt>
+                    <dd><ul class="obj-date">
+                            <li J_data="0" class="cur"><a href="javascript:void(0);"  >不限</a></li>
+                            <li J_data="1"><a href="javascript:void(0);"  >1-2个月</a></li>
+                            <li J_data="2"><a href="javascript:void(0);"  >3-4个月</a></li>
+                            <li J_data="3"><a href="javascript:void(0);"  >5-6个月</a></li>
+                            <!--<li J_data="4"><a href="javascript:void(0);"  >9-12个月</a></li>-->
+                            <!--<li J_data="4"><a href="javascript:void(0);"  >12个月以上</a></li>-->
+                        </ul></dd>
+                </dl>
+            </div>
+            <div class="shaixuan">
+                <dl>
+                    <dt class="li_1">认证等级：</dt>
+                    <dd><ul class="obj-dengji">
+                            <li J_data="0" class="cur"><a href="javascript:void(0);"  >不限</a></li>
+                            <li J_data="1"><a href="javascript:void(0);"  >A</a></li>
+                            <li J_data="2"><a href="javascript:void(0);"  >B</a></li>
+                            <li J_data="3"><a href="javascript:void(0);"  >C</a></li>
+                            <li J_data="4"><a href="javascript:void(0);"  >D</a></li>
+                            <li J_data="5"><a href="javascript:void(0);"  >E</a></li>
+                        </ul></dd>
+                </dl>
+            </div>
+            <div class="shaixuan">
+                <dl>
+                    <dt class="li_1">还款方式：</dt>
+                    <dd><ul class="obj-method">
+                            <li J_data="0" class="cur"><a href="javascript:void(0);"  >不限</a></li>
+                            <li J_data="1"><a href="javascript:void(0);"  >按月分期还款</a></li>
+                        </ul></dd>
+                </dl>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <?php if($_SESSION['uid']):?>
+        <div class="woyaojiekuan_tr">
+
+            <div class="zhanghu_jkt">
+                <ul>
+                    <li><a href="{:U('Userinfo/index')}"><?php echo $_SESSION['username']?></a></li>
+                    <?php if($auth[status]==3):?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/shenfen_yz_bg.gif"  alt="实名认证" title="实名认证"  class="png_fix" width="25" height="25"/></a></li>            <?php else: ?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/shenfen_yz_bg02.gif" alt="实名认证"  title="实名认证" class="png_fix"  width="25" height="25"/></a></li> 
+                    <?php endif;?>
+                    <?php if($user[u_phone_status]==2):?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/shouji_yz_bg.gif"  alt="手机绑定" title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>				<?php else:?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/shouji_yz_bg02.gif"  alt="手机绑定"  title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>			
+                    <?php endif;?>
+                    <?php if($user[u_email_status]==2):?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/youxiang_yz_bg.gif"  alt="邮箱认证" title="邮箱认证"         class="png_fix"  width="25" height="25"/></a></li>                 <?php else:?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/youxiang_yz_bg02.gif"  alt="邮箱认证"  title="邮箱认证"        class="png_fix"  width="25" height="25"/></a></li>                
+                    <?php endif;?>
+                    <?php if($user[u_trade_password]!=""):?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/jymm_yz_bg.gif"  alt="提现密码设置"   title="提现密码设置" class="png_fix"  width="25" height="25"/></a></li>  <?php else:?>
+                    <li><a href="{:U('Safeinfo/index')}"><img src="__PUBLIC__/frontend/images/jymm_yz_bg02.gif"  alt="提现密码设置"  title="提现密码设置"    class="png_fix"  width="25" height="25"/></a></li> 
+                    <?php endif;?>
+                </ul>       
+            </div>
+
+            <div class="zhanghu_jkb">
+                账户余额:<span><?php echo num_format($userData[fund] + $userData['lock_fund']);?></span>&nbsp;元
+                <ul>
+                    <li>可用金额：<b>{$userData.fund|num_format}</b>&nbsp;元</li>
+                    <li style="margin-right:10px;">冻结金额：<b>{$userData.lock_fund|num_format}</b>&nbsp;元</li>
+                </ul>
+                <ul>
+                    <li><a href="{:U('withdraw/show')}" class="jrb_but03">提&nbsp;&nbsp;现</a></li>
+                    <li><a  href="{:U('charge/show')}" class="jrb_but03">充&nbsp;&nbsp;值</a></li>
+                </ul>
+            </div>
+            <!--点击我要借款，如果是未通过认证的普通用户，提示他进入注册页面，页面并自动跳转到认证页面。如果是已经通过认证的用户，则进入发布借款的页面 -->
+        </div>
+        <?php else:?>
+        <div class="woyaojiekuan_tr02">
+            <ul>
+                <li><img src="__PUBLIC__/frontend/images/little_ad01.jpg"  title="金融宝桂林众投借贷平台" alt="金融宝桂林众投借贷平台"/></li>
+                <li>&nbsp;&nbsp;请&nbsp;<a href="{:U('Login/index')}" style="color:#ED994B">登录</a>&nbsp;或&nbsp;<a href="{:U('register/index')}" style="color:#ED994B">注册&nbsp;</a>后查看！</li>
+            </ul>
+        </div>
+        <?php endif;?>
+        <div class="fudong_jk"><a href="{:U('LoanMoney/index')}" class="jk_but01">我要借款</a></div>
+        <div class="clear"></div> 
+    </div>
+
+
+    <!--筛选结束-->
+    <!--投资列表开始-->
+    <div class="touzi_liebiao">
+        <h1 class="jrb_title">投资列表<a href="{:U('Loancenter/loanList')}" style="font-size:14px; font-weight:normal;">（默认排序）</a><a href="{:U('Loancenter/calculator')}" class="jsq_but03">理财计算器</a></h1>
+        <table class="liebiao_tt2">
+            <tr>
+                <td class="in_line">累计成交总金额<p>{$cjzje/10000|num_format}万元</p></td>
+                <td class="in_line">累计成交总笔数<p>{$cjzbs|num_format}笔</p></td>
+                <td>为用户累计赚取<p>{$zqlx/10000|num_format}万元</p></td>
+            </tr>
+        </table>
+        <table class="touzi_liebiao_con">
+            <thead>
+                <tr>
+                    <th>借款标题</th>
+                    <th class="symbol"><a href="{:U('Loancenter/loanList',array('orderby'=>'symbol','dir'=>$dir))}">信用等级
+                            <if condition="($orderByStatus eq 'symbol') ">
+                                <if condition="($dir eq 'up') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="信用等级降序"  title="降序"/></if>
+                                <if condition="($dir eq 'down') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="信用等级升序"  title="升序"/></if>
+                                <else/>
+                                <img src="__PUBLIC__/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
+                            </if>
+                        </a></th>
+                    <th><a href="{:U('Loancenter/loanList',array('orderby'=>'money','dir'=>$dir))}">借款金额
+                            <if condition="($orderByStatus eq 'money') ">
+                                <if condition="($dir eq 'up') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款金额降序"  title="降序"/></if>
+                                <if condition="($dir eq 'down') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款金额升序"  title="升序"/></if>
+                                <else/>
+                                <img src="__PUBLIC__/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                            </if>
+                        </a></th>
+                    <th><a href="{:U('Loancenter/loanList',array('orderby'=>'expires','dir'=>$dir))}">还款期限
+                            <if condition="($orderByStatus eq 'expires') ">
+                                <if condition="($dir eq 'up') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="还款期限降序"  title="降序"/></if>
+                                <if condition="($dir eq 'down') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="还款期限升序"  title="升序"/></if>
+
+                                <else/>
+                                <img src="__PUBLIC__/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
+                            </if>
+                        </a></th>
+                    <th><a href="{:U('Loancenter/loanList',array('orderby'=>'creat_time','dir'=>$dir))}">借款时间
+                            <if condition="($orderByStatus eq 'create_time') ">
+                                <if condition="($dir eq 'up') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序"  title="降序"/></if>
+                                <if condition="($dir eq 'down') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款时间升序"  title="升序"/></if>
+
+                                <else/>
+                                <img src="__PUBLIC__/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                            </if>
+                        </a></th>
+                    <th><a href="{:U('Loancenter/loanList',array('orderby'=>'schedule','dir'=>$dir))}">投资热度
+                            <if condition="($orderByStatus eq 'schedule') ">
+                                <if condition="($dir eq 'up') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="投资热度降序"  title="降序"/></if>
+                                <if condition="($dir eq 'down') "><img src="__PUBLIC__/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="投资热度升序"  title="升序"/></if>
+
+                                <else/>
+                                <img src="__PUBLIC__/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                            </if>
+                        </a></th>
+                    <th>状态</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                <?php if(empty($data_list)):?><tr><td colspan="6">暂无信息</td></tr><?php endif;?>    
+            <voList name="data_list" id="vo"> 
+                <tr>
+                    <td class="tl_left">
+                        <?php if($vo['type'] == 2):?>
+                        <img src="__PUBLIC__/frontend/images/shiwu_tubiao.png" title="有抵押信用标" alt="有抵押信用标"/>
+                        <img src="__PUBLIC__/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
+                        <?php else:?>
+                        <img src="__PUBLIC__/frontend/images/xinyong_tubiao.png" title="无抵押信用标" alt="无抵押信用标"/>
+                        <img src="__PUBLIC__/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
+                        <?php endif;?>
+                        <span><a href="{:customUrl('Loaninfo/index',array('id'=>$vo[id]))}" target="_blank" title="{$vo['title']}">{$vo['title']}</a></span>
+                    </td>
+                    <td><img src="__PUBLIC__/frontend/images/xinyong_level_{$vo.symbol}.png" class="png_fix" title="{$vo.img_title}" alt="{$vo.img_title}" /></td>
+                    <td>{$vo['money']} 元</td>
+                    <td>{$vo['expires']} 个月</td>
+                    <td>{$vo['create_time']|date="Y-m-d",###}</td>
+                    <?php if($vo['tmp']>200):?>
+                    <td class="jindu03"><div>{$vo['tmp']}%</div></td>
+                    <?php elseif($vo['tmp']>99):?>
+                    <td class="jindu02"><div>{$vo['tmp']}%</div></td>
+                    <?php else:?>
+                    <td><div  style="background:url(__PUBLIC__/frontend/images/jindu_bg.gif) no-repeat {$vo[tmp2]}px 0;" >{$vo[tmp]}%</div></td>
+                    <?php endif;?>
+                    <td>
+                        <?php if($vo['repay_status'] == 3):?>
+                        筹款中
+                        <?php else:?>
+                        <b style=" font-weight:normal; color:#999">还款中</b>
+                        <?php endif;?>
+                    </td>
+                    <td><a href="{:customUrl('Loaninfo/index',array('id'=>$vo[id]))}" target="_blank" class="list_chakan_but"></a></td>
+                </tr>
+            </volist>
+            </tbody>
+        </table>
+        <div class="shuoming_lb"  style="padding:20px 0 30px 0">
+            <div class="jrbfanye_kj">
+                <div id="light-pagination" class="pagination light-theme simple-pagination">
+                    <ul class="pp"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--投资列表结束--> 
+    <div class="clear"></div>    
+</div>
+<!--贷款中心结束-->
+<include file="Public:footer" />
+<script language="javascript" type="text/javascript" src="__PUBLIC__/frontend/vendor/simplePagination/jquery.simplePagination.js"></script>
+<script type="text/javascript">
+
+    var obj_type = null, obj_date = null, obj_method = null, obj_dengji = null, page = 1, pages = "{$count}", order = "{$orderByStatus}", dir = "{$ajaxDir}";
+    $(function() {
+        pagination(1);
+        //还款方式
+        $(".obj-method li").click(function() {
+            $(".obj-method li").removeClass('cur');
+            $(".obj-method li").removeAttr("style");
+            $(this).addClass("cur");
+            obj_method = $(this).attr('J_data');
+            page = 1;
+            doPost();
+        });
+        //标的类型
+        $(".obj-type li").click(function() {
+            $(".obj-type li").removeClass('cur');
+            $(".obj-type li").removeAttr("style");
+            $(this).addClass("cur");
+            obj_type = $(this).attr('J_data');
+            page = 1;
+            doPost();
+        });
+        //还款期限
+        $(".obj-date li").click(function() {
+            $(".obj-date li").removeClass('cur');
+            $(".obj-date li").removeAttr("style");
+            $(this).addClass("cur");
+            obj_date = $(this).attr('J_data');
+            page = 1;
+            doPost();
+        });
+        //等级认证
+        $(".obj-dengji li").click(function() {
+            $(".obj-dengji li").removeClass('cur');
+            $(".obj-dengji li").removeAttr("style");
+            $(this).addClass("cur");
+            obj_dengji = $(this).attr('J_data');
+            page = 1;
+            doPost();
+        });
+
+
+    });
+
+    function pagination(currentPage) {
+        $('.pagination').pagination({
+            items: pages,
+            itemsOnPage: 10,
+            cssStyle: 'light-theme',
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(pageNumber, event) {
+                page = pageNumber;
+                doPost();
+            }
+        });
+    }
+
+    function doPost() {
+        $('.touzi_liebiao_con').addClass('dengdai_con');
+        $.post('{:U("Loancenter/ajaxGetData")}', {
+            type: obj_type,
+            date: obj_date,
+            method: obj_method,
+            dengji: obj_dengji,
+            orderby: order,
+            dir: dir,
+            page: page
+        },
+        //存为json格式，在页面输出
+        function(data, status) {
+            $('.touzi_liebiao_con').removeClass('dengdai_con');
+            pages = data.pages;
+            data = data.list;
+            var html = '';
+            var tmp = 0;
+            for (var g in data) {
+                html += '<tr>';
+                html += '<td class="tl_left">';
+                if (data[g].type == 2) {
+                    html += '<img src="__PUBLIC__/frontend/images/shiwu_tubiao.png" />';
+                } else {
+                    html += '<img src="__PUBLIC__/frontend/images/xinyong_tubiao.png" />';
+                }
+                html += '<img src="__PUBLIC__/frontend/images/quanbao_tubiao.png" />';
+                html += '<span><a href="' + data[g].url + '" target="_blank">' + data[g].title + '</a></span>';
+                html += '</td>';
+
+                html += '<td>';
+                html += '<img src="__PUBLIC__/frontend/images/xinyong_level_' + data[g].symbol + '.png" alt="" title="' + data[g].img_title + '" class="png_fix" />';
+                html += '</td>';
+
+                html += '<td>';
+                html += data[g].money + ' 元';
+                html += '</td>';
+
+                html += '<td>';
+                html += data[g].expires + ' 个月';
+                html += '</td>';
+
+                html += '<td>';
+                html += data[g].create_date_time;
+                html += '</td>';
+
+                tmp = data[g].tmp;
+                tmp2 = data[g].tmp2;
+                if (tmp > 200)
+                    html += '<td class="jindu03"><div>' + tmp + '%</div></td>';
+                else if (tmp > 99)
+                    html += '<td class="jindu02"><div>' + tmp + '%</div></td>';
+                else
+                    html += '<td><div  style="background:url(__PUBLIC__/frontend/images/jindu_bg.gif) no-repeat ' + tmp2 + 'px 0;" >' + tmp + '%</div></td>';
+
+                html += '<td>';
+                if (data[g].repay_status === '3') {
+                    html += '筹款中';
+                } else {
+                    html += ' <b style=" font-weight:normal; color:#999">还款中</b>';
+                }
+                html += '</td>';
+
+                html += '<td><a href="' + data[g].url + '" target="_blank"  class="list_chakan_but"></a></td>';
+                html += '</tr>';
+            }
+
+            $('#list').empty();
+            if (html === '') {
+                html = '<tr><td colspan="6">暂无信息</td></tr>';
+            }
+            $('#list').html(html);//data是我组装的json的数据
+            pagination(page);
+        }, 'json');
+    }
+//js时间戳转换为日期
+    function getLocalTime(nS) {
+        return new Date(parseInt(nS) * 1000).toLocaleString().substr(0, 10).replace(/年|月/g, "-").replace(/日/g, " ")
+    }
+
+</script>
+</body>
+</html>

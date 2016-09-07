@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.title{font-size: 22px;padding-left:50px;height: 30px;line-height: 30px; color:#555555}
+.right_top2 li{list-style-type:none; margin-top:23px;}
+h3{ color:#555555;width:100px; margin-left:25px; float:left;font-weight:normal; font-size:14px;}
+.right_top2 span{ width:520px; float:left; margin-left:10px; color:#F00}
+label{ margin-left:0px; color:#00a8e8}
+.border{border-bottom: 1px solid #eee; margin-top:26px;}
+.id{background-image:url(../images/ico/pin.png);width:35px;height:24px;float:left;background-repeat: no-repeat; margin-left:50px}
+.name{background-image:url(../images/ico/user.png);width:35px;height:28px;float:left;background-repeat: no-repeat;margin-left:50px}
+.clok{background-image:url(../images/ico/key.png);width:35px;height:33px;float:left;background-repeat: no-repeat;margin-left:50px}
+.email{background-image:url(../images/ico/mail.png);width:35px;height:22px;float:left;background-repeat: no-repeat;margin-left:50px}
+.phone{background-image:url(../images/ico/iphone.png);width:35px;height:36px;float:left;background-repeat: no-repeat;margin-left:50px}
+.tx{background-image:url(../images/ico/unlock.png);width:35px;height:30px;float:left;background-repeat: no-repeat;margin-left:50px}
+
+.input2{ width:100px; height:30px; background: #3D89B4; color:white;}
+.namexl{ padding-top:40px; text-align:center; display:none}
+b{ color:#F00; width:7px; margin-right:5px;}
+input{padding: 4px 5px;line-height: 22px;color: #595959;font-size: 14px;border-radius: 2px;border: 1px solid #c5c5c5; margin-left:10px;}
+
+label a{color:#00a8e8}
+label a:hover{color:#00a8e8}
+.passxl{ padding-top:10px; text-align:center; display:none; }
+h5{font-weight:normal; font-size:14px; color:#b4b4c9}
+.emailxl{ padding-top:10px; text-align:center; display:none; }
+.phonexl{ padding-top:10px; display:none; }
+.phonexl li{ margin-left:230px;}
+.txxl{padding-top:10px; text-align:center; display:none; }
+.zhpass{ padding-top:10px;display:none;margin-left:230px;}
