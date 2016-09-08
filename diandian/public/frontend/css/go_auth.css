@@ -1,0 +1,25 @@
+
+.auth { height: 300px;  margin: auto; margin-bottom:45px;  }
+.auth_top{ width: 525px; height: 55px; margin-top: 15px;  padding-left: 25px;}
+.auth_top span { font-size:16px; color: #0055FF;}
+.auth_top p { font-size:15px; color:#0055FF;}
+.renzhengshuoming{  height: auto;margin-left: 25px; }
+.renzhengshuoming span{ color: #FF0000}
+.renzhengshuoming ul li{ line-height:30px; }
+
+.shangchuanzhengming{ height: auto;margin-left: 25px; margin-top: 25px;}
+.shangchuanzhengming dt{ background: #fafafa; height:50px;line-height: 50px;}
+.shangchuanzhengming ul li{ float: left; margin-top: 5px; }
+.shangchuanzhengming .wenjianming{ width: 350px;}
+.shangchuanzhengming .daxiao{ width:100px; }
+.shangchuanzhengming input{ height:25px; line-height:25px;}
+.shangchuanzhengming .choose { width:350px;}
+.shangchuanzhengming .submit { width: 50px;}
+
+.video dl{ width: 525px; height: auto;margin-left:25px;}
+.video dl dt{ font-weight:bold;}
+
+
+
+
+
