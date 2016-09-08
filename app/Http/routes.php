@@ -15,3 +15,4 @@ Route::get('/','IndexController@getUrl');
 Route::controller('index', 'IndexController');
 Route::controller('login', 'LoginController');
 Route::controller('register', 'RegisterController');
+Route::controller('msg', 'MsgController');

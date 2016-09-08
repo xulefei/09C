@@ -15,6 +15,15 @@ class RegisterController extends Controller{
     }
 
     public function getRegisteryan(Request $request){
+        $username = $request->input('username');
+        $phone = $request->input('phone');
+        $password = md5($request->input('password'));
+        $email = $request->input('email');
+        $times = time();
+        $code = $request->input('code');
+        $asd = DB::table('people')->insert(array('username'=>$username,
+            'password'=>$password,'p_ipone'=>$phone,'p_time'=>$times,'email'=>$email,'rand'=>$code));
+        // $users = DB::table('people')->first();
         echo '1';
     }
 

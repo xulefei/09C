@@ -18,7 +18,7 @@
     <form action="" method="post" id="register">
         <div class="biaodan">
             <ul>
-                <input  type="hidden" name="userId" value=""/>
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <li>
                     <span>用户名</span><input  name="username" maxlength="20" id="name" type="text" class="biaodan_reg"/><b id="yan">用户名必须要4-20位字母、数字和下划线！</b>	 <font id="okname" class="lvsetishi"></font>
                 </li>
@@ -39,7 +39,10 @@
                 <li>
                     <span>重复密码</span><input  name="rpass"  type="password" id="rpasss" class="biaodan_reg"/><b id="rpass">两次输入的密码必须一致！</b> <font id="okrpass" class="lvsetishi"></font>
                 </li>
-
+                <li>
+                     <span><b>*</b>收到的验证码</span><input  class="yanzhengma_01" name="code" maxlength="6" /><input type="hidden" id="yanzheng">
+                    <input name="" type="button" value="获取验证码" class="input2 hqyzm zm"  id="zm" style="background-color:#0E9DA9; color:#FFF; width:80px; height:30px; margin-left:15px; border:0; cursor:pointer;"/><span style=" float:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
                 <!-- <li>
                     <span>验证码</span><input  name="verify" maxlength="4"  class="biaodan_reg2"/><img src="" class="verify-code" onClick="click_change(this)" style="margin-left:10px; float:left" title="验证码"/><b id="verify1"></b><font id="okverify" class="lvsetishi"></font>
                 </li> -->
@@ -51,7 +54,7 @@
         <div class="fuwuxieyi" style="display:none">
             <iframe src="" style="width:500px; height:300px; border: solid 1px #e6e6e6;"></iframe></div>
         <div class="tijiao_jrb">
-            <input type="button" value="提&nbsp;&nbsp;交" name="start" id="start" class="jrb_but02" >
+            <input type="button" value="提&nbsp;&nbsp;交" name="start" id="start" class="jrb_but02" ><font class="tishi"></font>
             <b id="regMsg"></b></div>
         <input type="hidden" name="thirdPartyUserId" value="" />
     </form>
@@ -62,11 +65,8 @@
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 <script src="https://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript">
-    var email = 0, username = 0, phone = 0, password = 0, rpassword = 0, code = 0;
+    var email = 0, username = 0, phone = 0, password = 0, rpassword = 0, again = 0 , code = 0;
     //实现点击切换验证码
-    function click_change(obj) {
-        obj.src = "{:U('Global/verify')}?random=" + Math.random();
-    }
 
     $(function() {
         //初始化信息
@@ -107,6 +107,7 @@
                 $.get("{{url('register/usercheck')}}", {
                     name: $("#name").val()
                 }, function(str) {
+                    // alert(str)
                     str = $.trim(str);
                     if (str === '0') {
                         $("#yan").html("<font color=\"#a9a9a9\">您输入的用户名存在！请重新输入！</font>").show();
@@ -159,9 +160,21 @@
 
     $("#start").click(function() {
         // alert('123')
-        var ok = $('#ok').val();
+        var ok = $('#ok').is(':checked');
+        if(ok){
+            again = 1
+        }else{
+            again = 0
+        }
+        var rand = $('#yanzheng').val();
+        var yan = $('input[name=code]').val();
+        if(yan==rand){
+            code = 1
+        }else{
+            code = 0
+        }
 
-        if (email === 0 || phone === 0 || username === 0 || password === 0 || rpassword === 0) {
+        if (again === 0 ||email === 0 || phone === 0 || username === 0 || password === 0 || rpassword === 0 ||code ===0) {
             $("#regMsg").html("<font color=\"red\">请填写完整注册信息！</font>");
             setTimeout(function() {
                 $("#regMsg").html('');
@@ -240,6 +253,57 @@
         }
         return true;
     }
+    // $(function(){
+    //     fun_timedown(60);
+    // });
+    $(".hqyzm").click(function(){
+
+        var phone = $("input[name='phone']").val();
+        var _token = $("input[name='_token']").val();
+        // alert(_token);
+        if(phone==""){
+            $(".tishi").html("<font color=\"red\">发送失败！</font>");
+        }else{
+            $.post('{{url("msg/index")}}', {tel:phone,_token:_token}, function(str){
+                if (str) {
+                    $('#yanzheng').val(str)
+                    fun_timedown(60);
+                    $(".tishi").html("<font color=\"#0E9DA9\">已经发送！</font>");
+                    $(".hqyzm").attr("disabled", "disabled");
+                    $(".hqyzm").css({"color": "#000", "background-color": "#999"});
+                    setTimeout(function() {
+                            $(".tishi").html("");
+                     }, 3000);
+                } else {
+                    $(".tishi").html("<font color=\"red\">发送失败！</font>");      
+                }
+                // alert(str);
+            })
+           
+        }
+            
+    })
+
+
+    function fun_timedown(time)
+            {
+                if (time == 'undefined')
+                    time = 60;
+                //$("#hqyzm").html(time+"秒");
+                $(".zm").attr("value", time + "秒");
+
+                time = time - 1;
+                if (time >= 0)
+                {
+                    $(".zm").attr("disabled", "disabled");
+                    setTimeout("fun_timedown(" + time + ")", 1000);
+                } else
+                {
+                    $(".zm").attr("disabled", "");
+                    $(".zm").css({"color": "#FFF", "background-color": "#0E9DA9"});
+                    $(".zm").attr("value", "获取验证码");
+                }
+            }
 </script>
 <script>
     $(document).ready(function() {

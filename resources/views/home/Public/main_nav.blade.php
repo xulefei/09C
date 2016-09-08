@@ -3,8 +3,8 @@
   <div id="top_con">
   
     <ul>
-      <li class="no_fg"><a href="{:U('Register/index')}">注册</a></li>
-      <li><a href="">登陆</a></li>
+      <li class="no_fg"><a href="{{url('Register/index')}">注册</a></li>
+      <li><a href="{{url('login/index')}">登陆</a></li>
       <li><a href="" style=" color:#f00">新手指引</a></li>
     </ul>
    
