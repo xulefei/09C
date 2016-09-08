@@ -26,7 +26,7 @@
  
 <div class="top_bg">
     <div class="top">
-        <div class="jinrongbao_logo"><img src="" width="195px;" height="67px;" title="金融宝桂林众投借贷平台" alt="金融宝桂林众投借贷平台"></div>
+        <div class="jinrongbao_logo"><img src="\frontend\images\logo.gif" width="195px;" height="67px;" title="金融宝桂林众投借贷平台" alt="金融宝桂林众投借贷平台"></div>
         <div class="daohang">
             <ul>
             	<!--<li><a href="{:U('Roll/total')}">收益</a></li>-->
