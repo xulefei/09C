@@ -4,17 +4,17 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>关于借款-桂林金融宝众投借贷平台</title>
-<include file="Public:header" />
-<link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
+    @include('home.Public.header')
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--头部开始-->
-<include file="Public:main_nav" />
+@include('home.Public.main_nav')
 <div class="yinying_jrb2"></div>
 <div id="content">
-  <include file="Public:help_left" />
+    @include('home.Public.help_nav')
   <div class="help_right_con">
     <h1>如何申请借款</h1>
     <h2>1. 什么人能成为金融宝的借款人？</h2>
@@ -53,7 +53,7 @@
       <li>认证有效期：永久</li>
     </ul>
     <h3>认证示例：</h3>
-    <p class="bzzx_fg"><img src="__PUBLIC__/frontend/images/ico/woyaojiekuan_1.jpg" alt="" title="身份认证"/></p>
+    <p class="bzzx_fg"><img src="/frontend/images/ico/woyaojiekuan_1.jpg" alt="" title="身份认证"/></p>
     
     <h2 id="gongzuorenzheng">2. 工作认证</h2>
     <p>您的工作状况是金融宝评估您信用状况的主要依据。请您上传真实可靠的工作资料。</p>
@@ -91,7 +91,7 @@
       <li>认证有效期：6个月</li>
     </ul>
     <h3>认证示例：</h3>
-    <p class="bzzx_fg"><img src="__PUBLIC__/frontend/images/ico/woyaojiekuan_2.jpg" alt="" title="银行信用报告"/></p>
+    <p class="bzzx_fg"><img src="/frontend/images/ico/woyaojiekuan_2.jpg" alt="" title="银行信用报告"/></p>
     
     <h2 id="shoururenzheng">4. 收入认证</h2>
     <p>您的银行流水单以及完税证明，是证明您收入情况的主要文件，也是金融宝评估您还款能力的主要依据之一。</p>
@@ -192,21 +192,21 @@
     <h4>认证有效期：永久</h4>
     <p class="fg_line"></p>        
     <h1 id="dengjitubiao">等级图标说明</h1>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_a.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于90分；信用额度为20,000元。<span style="color:#999">(通过3项必要信用认证+全部可选信用认证)</span></p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_b.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于70小于等于90分；信用额度为15,000元。<span style="color:#999">(通过3项必要信用认证+任意5-6项可选信用认证)</span></p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_c.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于50小于等于70分；信用额度为5,000元。<span style="color:#999">(通过3项必要信用认证+任意3-4项可选信用认证)</span></p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_d.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于30小于等于50分；信用额度为2,000元。<span style="color:#999">(通过3项必要信用认证+任意1-2项可选信用认证)</span></p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_e.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：30分；信用额度为1,000元。<span style="color:#999">(通过3项必要信用认证)</span></p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_level_f.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：0分；信用额度为0元。<span style="color:#999">新注册用户默认等级</span></p>
-    <p><img src="__PUBLIC__/frontend/images/shiwu_tubiao.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>有抵押信用标；抵押物为房产或者车产。</p>
-    <p><img src="__PUBLIC__/frontend/images/xinyong_tubiao.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>无抵押信用标。</p>
-    <p><img src="__PUBLIC__/frontend/images/quanbao_tubiao.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>拥有全保标志的借贷，经过严格专业的审核，平台承诺100%保本，绝对安全的保障。</p>
+    <p><img src="/frontend/images/xinyong_level_a.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于90分；信用额度为20,000元。<span style="color:#999">(通过3项必要信用认证+全部可选信用认证)</span></p>
+    <p><img src="/frontend/images/xinyong_level_b.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于70小于等于90分；信用额度为15,000元。<span style="color:#999">(通过3项必要信用认证+任意5-6项可选信用认证)</span></p>
+    <p><img src="/frontend/images/xinyong_level_c.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于50小于等于70分；信用额度为5,000元。<span style="color:#999">(通过3项必要信用认证+任意3-4项可选信用认证)</span></p>
+    <p><img src="/frontend/images/xinyong_level_d.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：大于30小于等于50分；信用额度为2,000元。<span style="color:#999">(通过3项必要信用认证+任意1-2项可选信用认证)</span></p>
+    <p><img src="/frontend/images/xinyong_level_e.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：30分；信用额度为1,000元。<span style="color:#999">(通过3项必要信用认证)</span></p>
+    <p><img src="/frontend/images/xinyong_level_f.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>信用总分：0分；信用额度为0元。<span style="color:#999">新注册用户默认等级</span></p>
+    <p><img src="/frontend/images/shiwu_tubiao.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>有抵押信用标；抵押物为房产或者车产。</p>
+    <p><img src="/frontend/images/xinyong_tubiao.png" class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>无抵押信用标。</p>
+    <p><img src="/frontend/images/quanbao_tubiao.png"  class="png_fix" style=" display:inline; vertical-align:middle; margin-right:10px;" title="信用等级"/>拥有全保标志的借贷，经过严格专业的审核，平台承诺100%保本，绝对安全的保障。</p>
     <p class="fg_line">每通过一项信用认证，信用总分增加10分，信用额度也相应增加。所以申请通过的认证越多，可用于借款的信用额度（可借款金额）越大。</p>
   </div>
   <div class="clear"></div>
 </div>
 <!--底部内容开始-->
-<include file="Public:footer" />
+@include('home.Public.footer')
 <!--底部内容结束-->
 <script>
         $(document).ready(function() {

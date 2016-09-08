@@ -4,9 +4,9 @@
         <title>金融宝认证页面</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="swfupload/swfupload.js"></script>
         <script type="text/javascript" src="swfupload/handlers.js"></script>
         <style type="text/css">
@@ -20,7 +20,7 @@
 
             <div class="touxiang_tc">
                 <dl>
-                    <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>技术职称认证<p>技术职称是经专家评审、反映一个人专业技术水平并作为聘任专业技术职务依据的一种资格，不与工资挂钩，是金融宝考核借款人信用的评估因素之一。</p></dt>
+                    <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>技术职称认证<p>技术职称是经专家评审、反映一个人专业技术水平并作为聘任专业技术职务依据的一种资格，不与工资挂钩，是金融宝考核借款人信用的评估因素之一。</p></dt>
                     <dd><b>认证说明：</b></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请上传您的技术职称证书原件照片。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、请确认您上传的资料是清晰的、未经修改的数码照片（不可以是扫描图片）。</dd>

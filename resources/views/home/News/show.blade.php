@@ -2,9 +2,9 @@
 <html>
     <head>
     @include('home.Public.header')
-    <link href="frontend/css/index.css" rel="stylesheet" type="text/css" />
-    <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-    <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
+    <link href="/frontend/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+    <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!--头部开始-->

@@ -3,7 +3,7 @@
     <head>
 
     @include('home.Public.header')
-    <link href="frontend/css/user.css" type="text/css" rel="stylesheet"/>
+    <link href="/frontend/css/user.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <!--头部导航-->

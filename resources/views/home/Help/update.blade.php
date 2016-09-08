@@ -5,10 +5,10 @@
 <title>修改分类</title>
 </head>
 <body>
-	<form action="{:U('NewList/update')}" method="post">
+	<form action="" method="post">
 		<input type="hidden" value="update" name="update" />
 		<input type="hidden" value="{$type}" name="typeId" />
-		<input type="text" name="typeName" value="{$news[0].type_name}"  />
+		<input type="text" name="typeName" value=""  />
 		&nbsp;
 		<input type="submit" value="修改"/>
 	</form>

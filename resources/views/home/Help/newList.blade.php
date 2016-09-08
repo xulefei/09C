@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>添加新闻分类</title>
+<title>文章列表</title>
 </head>
 <body>
-<form action="{:U('NewList/addNewsType')}" method="post">
-	<input type="text" name="typeName"  />
-	&nbsp;
-	<input type="submit" value="增加"/>
-</form>
+	帮助分类：<br/><br/><volist name="news" id="vo" >
+	<a href=""></a>
+	 <p><br/></p>
+</volist>
+	
+
 </body>
 </html>

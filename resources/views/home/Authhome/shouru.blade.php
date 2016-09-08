@@ -4,9 +4,9 @@
         <title>金融宝认证页面</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="swfupload/swfupload.js"></script>
         <script type="text/javascript" src="swfupload/handlers.js"></script>
         <style type="text/css">
@@ -20,10 +20,10 @@
 
             <div class="touxiang_tc">
                 <dl>
-                    <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>收入认证<p>您的银行流水单，是证明您收入情况的主要文件，也是金融宝评估您还款能力的主要依据之一。</p></dt>
+                    <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>收入认证<p>您的银行流水单，是证明您收入情况的主要文件，也是金融宝评估您还款能力的主要依据之一。</p></dt>
                     <dd><b>认证说明：</b></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请提交下面任意一项资料：</dd>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）可体现经营情况的最近连续6个月的个人银行卡流水单，或网银电脑截屏。<a href="frontend/images/shili/yinhangliushui.jpg" target="_blank">查看示例</a></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）可体现经营情况的最近连续6个月的个人银行卡流水单，或网银电脑截屏。<a href="/frontend/images/shili/yinhangliushui.jpg" target="_blank">查看示例</a></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）1个月内打印的带公司名称的最近3个月的社保缴费记录，或最新的可体现缴费状态及公司名称的个人社保账户网络截屏。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、请确认您上传的资料是清晰的、未经修改的数码照片（不可以是扫描图片）。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、图片的尺寸<span>小于1.5M。</span>格式为：<span>jpg、png、gif。</span></dd>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/eebao.css" type="text/css"  rel="stylesheet" />
+        <link href="/frontend/css/eebao.css" type="text/css"  rel="stylesheet" />
         <style type="text/css">
             .box04_br .cur{color:red;}
             #fundshow{ display:none;}
@@ -18,16 +18,16 @@
                 <!--盒子一开始-->
                 <div class="eeb_box01">
                     <div class="box01_l">
-                        <div class="box01_l_t"><img src="__PUBLIC__/frontend/images/rili_icon.png" class="png_fix" title="可得收益"/>今日可得收益（元）</div>
+                        <div class="box01_l_t"><img src="__PUBLIC__//frontend/images/rili_icon.png" class="png_fix" title="可得收益"/>今日可得收益（元）</div>
                         <div class="box01_l_b"  >
                             <div class="box01_l_b"  id="todayMoneyhide"></div>
                             <div class="box01_l_b"  id="todayMoneyShow">0.00</div>
                         </div>
                     </div>
                     <div class="box01_r">
-                        <div class="box01_r_t"><img src="frontend/images/rili_icon.png" class="png_fix" style="vertical-align:middle; margin-right:10px; float:left;" title="可得收益"/>
+                        <div class="box01_r_t"><img src="/frontend/images/rili_icon.png" class="png_fix" style="vertical-align:middle; margin-right:10px; float:left;" title="可得收益"/>
                             <span style="float:left">昨日已得收益（元）</span>
-                            <a href="{:U('Help/jisuanqi')}" target="_blank">收益模拟器<img src="frontend/images/wenhao2_icon.png" class="png_fix" style="vertical-align:middle; margin-left:5px;" title="收益模拟器"/></a></div>
+                            <a href="{:U('Help/jisuanqi')}" target="_blank">收益模拟器<img src="/frontend/images/wenhao2_icon.png" class="png_fix" style="vertical-align:middle; margin-left:5px;" title="收益模拟器"/></a></div>
                         <div class="box01_r_b" id="fund"  ></div>
                         <div class="box01_r_b" id="fundshow"  ></div>
                     </div>
@@ -46,7 +46,7 @@
                             <div class="box02_r_tr"><span>当前利率（%）</span><p></p></div>
                             <div class="box02_r_tl png_fix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>例：</b>存入10万元本金<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当月收益=<span></span>元</p></div>
                         </div>
-                        <div class="box02_r_b png_fix"><a href="" class="zhuanru_eebao">转&nbsp;入</a><a href="" class="zhuanchu_eebao">转&nbsp;出</a><a href="#jihao_eebao" style="float:left; line-height:30px; color:#3d89b4; font-weight:bold;"><img src="frontend/images/guanli_icon.png" style="vertical-align:middle;"  title="查看明细"/>&nbsp;查看明细</a></div>
+                        <div class="box02_r_b png_fix"><a href="" class="zhuanru_eebao">转&nbsp;入</a><a href="" class="zhuanchu_eebao">转&nbsp;出</a><a href="#jihao_eebao" style="float:left; line-height:30px; color:#3d89b4; font-weight:bold;"><img src="/frontend/images/guanli_icon.png" style="vertical-align:middle;"  title="查看明细"/>&nbsp;查看明细</a></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -112,7 +112,7 @@ d
             <input type="hidden" id="total" value="" />
         </div>
         <include file='Public:footer'/>
-        <script language="javascript" type="text/javascript" src="frontend/js/My97DatePicker/WdatePicker.js"></script>
+        <script language="javascript" type="text/javascript" src="/frontend/js/My97DatePicker/WdatePicker.js"></script>
         <script type="text/javascript">
             today = $('#todayMoneyShow').html();
             total = $('#totalMoney').html();

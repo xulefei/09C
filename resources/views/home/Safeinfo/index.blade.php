@@ -3,8 +3,8 @@
         <head>
 
         @include('home.Public.header')
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/anquan.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/anquan.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
 .wsz {
 	color:#a9a9a9
@@ -159,6 +159,6 @@
 </div>
 @include('home.Public.footer
 ')
-<script src="frontend/js/anquan.js" language="javascript"></script>
+<script src="/frontend/js/anquan.js" language="javascript"></script>
 </body>
 </html>

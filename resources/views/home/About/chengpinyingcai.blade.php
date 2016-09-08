@@ -4,9 +4,9 @@
 @include('home.Public.header')
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>诚聘英才-桂林金融宝众投借贷平台</title>
-<link href="frontend/css/index.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 @include('home.Public.main_nav')

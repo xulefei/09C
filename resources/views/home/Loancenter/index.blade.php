@@ -4,9 +4,9 @@
 
     @include('home.Public.header')
     <!--引入样式文件-->
-    <link href="frontend/css/index.css" type="text/css" rel="stylesheet" />
-    <link href="frontend/css/user.css" type="text/css"  rel="stylesheet" />
-    <link href="frontend/vendor/simplePagination/simplePagination.css" type="text/css"  rel="stylesheet" />
+    <link href="/frontend/css/index.css" type="text/css" rel="stylesheet" />
+    <link href="/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+    <link href="/frontend/vendor/simplePagination/simplePagination.css" type="text/css"  rel="stylesheet" />
     <!--引入样式文件结束-->
     <style>
         .cur{
@@ -85,14 +85,14 @@
             <div class="zhanghu_jkt">
                 <ul>
                     <li><a href=""></a></li>
-                    <li><a href=""><img src="frontend/images/shenfen_yz_bg.gif"  alt="实名认证" title="实名认证"  class="png_fix" width="25" height="25"/></a></li>            
-                    <li><a href=""><img src="frontend/images/shenfen_yz_bg02.gif" alt="实名认证"  title="实名认证" class="png_fix"  width="25" height="25"/></a></li> 
-                    <li><a href=""><img src="frontend/images/shouji_yz_bg.gif"  alt="手机绑定" title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>				
-                    <li><a href=""><img src="frontend/images/shouji_yz_bg02.gif"  alt="手机绑定"  title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>			
-                    <li><a href=""><img src="frontend/images/youxiang_yz_bg.gif"  alt="邮箱认证" title="邮箱认证"         class="png_fix"  width="25" height="25"/></a></li>                 
-                    <li><a href=""><img src="frontend/images/youxiang_yz_bg02.gif"  alt="邮箱认证"  title="邮箱认证"        class="png_fix"  width="25" height="25"/></a></li>                
-                    <li><a href=""><img src="frontend/images/jymm_yz_bg.gif"  alt="提现密码设置"   title="提现密码设置" class="png_fix"  width="25" height="25"/></a></li>  
-                    <li><a href=""><img src="frontend/images/jymm_yz_bg02.gif"  alt="提现密码设置"  title="提现密码设置"    class="png_fix"  width="25" height="25"/></a></li> 
+                    <li><a href=""><img src="/frontend/images/shenfen_yz_bg.gif"  alt="实名认证" title="实名认证"  class="png_fix" width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/shenfen_yz_bg02.gif" alt="实名认证"  title="实名认证" class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/shouji_yz_bg.gif"  alt="手机绑定" title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/shouji_yz_bg02.gif"  alt="手机绑定"  title="手机绑定" class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/youxiang_yz_bg.gif"  alt="邮箱认证" title="邮箱认证"         class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/youxiang_yz_bg02.gif"  alt="邮箱认证"  title="邮箱认证"        class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/jymm_yz_bg.gif"  alt="提现密码设置"   title="提现密码设置" class="png_fix"  width="25" height="25"/></a></li>
+                    <li><a href=""><img src="/frontend/images/jymm_yz_bg02.gif"  alt="提现密码设置"  title="提现密码设置"    class="png_fix"  width="25" height="25"/></a></li>
                    
                 </ul>       
             </div>
@@ -112,7 +112,7 @@
         </div>
         <div class="woyaojiekuan_tr02">
             <ul>
-                <li><img src="frontend/images/little_ad01.jpg"  title="金融宝桂林众投借贷平台" alt="金融宝桂林众投借贷平台"/></li>
+                <li><img src="/frontend/images/little_ad01.jpg"  title="金融宝桂林众投借贷平台" alt="金融宝桂林众投借贷平台"/></li>
                 <li>&nbsp;&nbsp;请&nbsp;<a href="" style="color:#ED994B">登录</a>&nbsp;或&nbsp;<a href="" style="color:#ED994B">注册&nbsp;</a>后查看！</li>
             </ul>
         </div>
@@ -138,39 +138,39 @@
                     <th>借款标题</th>
                     <th class="symbol"><a href="">信用等级
                             
-                              <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="信用等级降序"  title="降序"/>
-                                <img src="frontend/images/tz_list_px_arrow_clicked_up.gif" alt="信用等级升序"  title="升序"/>
+                              <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="信用等级降序"  title="降序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="信用等级升序"  title="升序"/>
                              
-                                <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
+                                <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
                            
                         </a></th>
                     <th><a href="">借款金额
                             
-                                <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款金额降序"  title="降序"/>
-                                <img src="frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款金额升序"  title="升序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款金额降序"  title="降序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款金额升序"  title="升序"/>
                                 
-                                <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
                         
                         </a></th>
                     <th><a href=''>还款期限
                             
-                                <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="还款期限降序"  title="降序"/>
-                                <img src="frontend/images/tz_list_px_arrow_clicked_up.gif" alt="还款期限升序"  title="升序"/>
-                                <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="还款期限降序"  title="降序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="还款期限升序"  title="升序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" title="默认排序" />
                             
                         </a></th>
                     <th><a href="">借款时间
                            
-                                <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序"  title="降序"/>
-                                <img src="frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款时间升序"  title="升序"/></if>
-                                <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序"  title="降序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="借款时间升序"  title="升序"/></if>
+                                <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
                            
                         </a></th>
                     <th><a href="">投资热度
                             
-                                <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="投资热度降序"  title="降序"/>
-                                <img src="frontend/images/tz_list_px_arrow_clicked_up.gif" alt="投资热度升序"  title="升序"/>
-                                <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="投资热度降序"  title="降序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_clicked_up.gif" alt="投资热度升序"  title="升序"/>
+                                <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序"  title="默认排序"/>
                         </a></th>
                     <th>状态</th>
                     <th></th>
@@ -181,20 +181,20 @@
             <voList name="data_list" id="vo"> 
                 <tr>
                     <td class="tl_left">
-                        <img src="frontend/images/shiwu_tubiao.png" title="有抵押信用标" alt="有抵押信用标"/>
-                        <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
-                        <img src="frontend/images/xinyong_tubiao.png" title="无抵押信用标" alt="无抵押信用标"/>
-                        <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
+                        <img src="/frontend/images/shiwu_tubiao.png" title="有抵押信用标" alt="有抵押信用标"/>
+                        <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
+                        <img src="/frontend/images/xinyong_tubiao.png" title="无抵押信用标" alt="无抵押信用标"/>
+                        <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix">
                         <span><a href="" target="_blank" title=""></a></span>
                     </td>
-                    <td><img src="frontend/images/xinyong_level_.png" class="png_fix" title="" alt="" /></td>
+                    <td><img src="/frontend/images/xinyong_level_.png" class="png_fix" title="" alt="" /></td>
                     <td>元</td>
                     <td>个月</td>
                     <td></td>
                     <td class="jindu03"><div>%</div></td>
                     <td class="jindu02"><div>%</div></td>
                     
-                    <td><div  style="background:url(frontend/images/jindu_bg.gif) no-repeat {$vo[tmp2]}px 0;" >%</div></td>
+                    <td><div  style="background:url(/frontend/images/jindu_bg.gif) no-repeat {$vo[tmp2]}px 0;" >%</div></td>
                     <td>
             
                         筹款中
@@ -220,7 +220,7 @@
 </div>
 <!--贷款中心结束-->
 @include('home.Public.footer')
-<script language="javascript" type="text/javascript" src="frontend/vendor/simplePagination/jquery.simplePagination.js"></script>
+<script language="javascript" type="text/javascript" src="/frontend/vendor/simplePagination/jquery.simplePagination.js"></script>
 
 </body>
 </html>

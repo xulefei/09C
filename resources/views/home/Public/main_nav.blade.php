@@ -10,7 +10,7 @@
    
     <ul>
       <li class="no_fg orange"><a href=""></a></li>
-      <li><a href=""><img src="frontend/images/ico/Message.png" width="16" height="16" style="vertical-align:-3px" title="消息"/>&nbsp;<span style="color:#f00"></span></a></li>
+      <li><a href=""><img src="/frontend/images/ico/Message.png" width="16" height="16" style="vertical-align:-3px" title="消息"/>&nbsp;<span style="color:#f00"></span></a></li>
       <li><a href="">充值</a></li>
       <li><a href="">提现</a></li>
        <li><a href="" style="color:#F00">申请借款</a></li>

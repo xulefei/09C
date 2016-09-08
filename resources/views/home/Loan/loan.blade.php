@@ -3,11 +3,11 @@
 <head>
  <title>我要借款</title>
 @include('home.Public.header')
-<link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
 
-<script src="frontend/js/jquery.js" type="text/javascript"> </script>
-<script src="frontend/js/reg.js" type="text/javascript"> </script>
+<script src="/frontend/js/jquery.js" type="text/javascript"> </script>
+<script src="/frontend/js/reg.js" type="text/javascript"> </script>
 </head>
 <style type="text/css">
 .you_class{ display:none}
@@ -118,7 +118,7 @@ $("#wu").click(function(){
       <div class="fuwuxieyi2" style="display:none"><iframe src="" style="width:500px; height:300px; border: solid 1px #e6e6e6;"></iframe></div> 
       <div class="wyjk_but_con" >
       <input type="submit" id="submitForm"  value="提交借款"  class="jrb_but01" style="padding:0;">
-	  <span class="yz_info" id="sForm" style="margin-left:20px; line-height:30px; color:#a9a9a9;"><img src="frontend/images/yz_info_bg.gif" style="vertical-align:middle"  title="提示"/>&nbsp;请先同意金融宝协议</span>
+	  <span class="yz_info" id="sForm" style="margin-left:20px; line-height:30px; color:#a9a9a9;"><img src="/frontend/images/yz_info_bg.gif" style="vertical-align:middle"  title="提示"/>&nbsp;请先同意金融宝协议</span>
 	  </div>
 	  <div  id="sForm" style="float:left;"></div>
     </div>

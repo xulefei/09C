@@ -4,9 +4,9 @@
         <title>金融宝认证页面</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="swfupload/swfupload.js"></script>
         <script type="text/javascript" src="swfupload/handlers.js"></script>
     <style type="text/css">
@@ -25,7 +25,7 @@
 
         <div class="touxiang_tc">
           <dl>
-            <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/></dt>
+            <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/></dt>
             <dd><b>认证说明：</b></dd>
             <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、您上传的证件必须是<span>真实有效的，</span>如若无效，则认证将无法通过。</dd>
             <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、请您上传您的<span>本人件复印件。</span></dd>

@@ -6,16 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>名词解析-桂林金融宝众投借贷平台</title>
  <include file="Public:header" />
-<link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
  </head>
 <body>
 <!--头部开始-->
-<include file="Public:main_nav" />
+@include('home.Public.main_nav')
 <div class="yinying_jrb2"></div>
 <div id="content">
-  <include file="Public:help_left" />
+    @include('home.Public.help_nav')
   <div class="help_right_con">
     <h1>名词解释</h1>
     <h2>1. 借款用户（借款人）</h2>
@@ -54,6 +54,6 @@
 </div>
 <!--底部内容开始-->
 <!--底部内容结束-->
-<include file="Public:footer" />
+@include('home.Public.footer')
 </body>
 </html>

@@ -5,17 +5,17 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>关于E额宝-桂林金融宝众投借贷平台</title>
- <include file="Public:header" />
-<link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
+    @include('home.Public.header')
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
  </head>
 <body>
 <!--头部开始-->
-<include file="Public:main_nav" />
+@include('home.Public.main_nav')
 <div class="yinying_jrb2"></div>
 <div id="content">
-  <include file="Public:help_left" />
+    @include('home.Public.help_nav')
   <div class="help_right_con">
     <h1>E额宝介绍</h1>
     <p>E额宝是金融宝互动理财平台与工商银行多种理财产品结合推出的最新理财增值服务，E额宝为用户提供其他理财产品无法达到的"保本，高息，随时存取"，让理财变得轻松安全。</p>
@@ -24,7 +24,7 @@
     <h2 id="gx_eebao">2. 高息</h2>
     <p>E额宝是金融宝互动理财平台与工商银行多种理财产品结合推出的最新理财增值服务，不仅本金更有保障,利率也比同类产品更稳,更高。</p>
     <h2>3. 流程指引</h2>
-    <p><img src="__PUBLIC__/frontend/images/eeb_liucheng_pic_bg1.gif" alt="" width="700" title="流程图"/></p>
+    <p><img src="/frontend/images/eeb_liucheng_pic_bg1.gif" alt="" width="700" title="流程图"/></p>
     <p class="fg_line"></p>
     <h1 id="sy_eebao">收益</h1>
     <h2>1. E额宝每天的收益是怎么计算的？</h2>
@@ -54,7 +54,7 @@
   <div class="clear"></div>
 </div>
 <!--底部内容开始-->
-<include file="Public:footer" />
+@include('home.Public.footer')
 <!--底部内容结束-->
 <script>
         $(document).ready(function() {

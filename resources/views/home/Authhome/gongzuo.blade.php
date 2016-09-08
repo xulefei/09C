@@ -4,9 +4,9 @@
         <title>金融宝认证页面</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="swfupload/swfupload.js"></script>
         <script type="text/javascript" src="swfupload/handlers.js"></script>
         <style type="text/css">
@@ -20,11 +20,11 @@
 
             <div class="touxiang_tc">
                 <dl>
-                    <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>工作认证<p>您的工作状况是金融宝评估您信用状况的主要依据。请您上传真实可靠的工作资料。</p></dt>
+                    <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>工作认证<p>您的工作状况是金融宝评估您信用状况的主要依据。请您上传真实可靠的工作资料。</p></dt>
                     <dd><b>认证说明：</b></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请提交下面任意一项资料：</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）加盖单位公章的劳动合同。</dd>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）最近一个月内开具的加盖单位公章的在职证明。<a href="frontend/images/shili/gongzuo.jpg" target="_blank">查看示例</a></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）最近一个月内开具的加盖单位公章的在职证明。<a href="/frontend/images/shili/gongzuo.jpg" target="_blank">查看示例</a></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、请确认您上传的资料是清晰的、未经修改的数码照片（不可以是扫描图片）。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、图片的尺寸<span>小于1.5M。</span>格式为：<span>jpg、png、gif。</span></dd>
                     <dd><b>认证条件：<span>需在现单位工作满3个月。</span></b></dd>

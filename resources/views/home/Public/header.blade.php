@@ -3,10 +3,10 @@
 <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21725670"></script>
 <meta property="wb:webmaster" content="f88d45f96c0d0f73" />
 <meta property="qc:admins" content="1461464435622221636375" />
-<link rel="shortcut icon" href="__PUBLIC__/frontend/images/favicon.ico" type="imagend.microsoft.icon">
+<link rel="shortcut icon" href="/frontend/images/favicon.ico" type="imagend.microsoft.icon">
 <!-- <meta name="keywords" content="" />
 <meta name="description" content="" /> -->
-<link href=" frontend/css/base.css" type="text/css"  rel="stylesheet" />
+<link href=" /frontend/css/base.css" type="text/css"  rel="stylesheet" />
 <style type="text/css">
     .zj{
         cursor: pointer;
@@ -19,7 +19,7 @@
     }
 </style>
 <!--[if IE 6]>
-<script src="__PUBLIC__/frontend/js/DD_belatedPNG.js"></script>
+<script src="/frontend/js/DD_belatedPNG.js"></script>
 <script>
   /* EXAMPLE */
   DD_belatedPNG.fix('.png_fix');

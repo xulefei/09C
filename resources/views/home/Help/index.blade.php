@@ -4,18 +4,18 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>关于投资-桂林金融宝众投借贷平台</title>
- <include file="Public:header" />
-<link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
+    @include('home.Public.header')
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/js/jquery.js" rel="stylesheet" type="text/css" />
  </head>
 <body>
 <!--头部开始-->
-<include file="Public:main_nav" />
+@include('home.Public.main_nav')
 <div class="yinying_jrb2"></div>
 <!--头部内容结束-->
 <div id="content">
-  <include file="Public:help_left" />
+    @include('home.Public.help_nav')
   <div class="help_right_con">
     <h1>如何理财（投标注意事项） </h1>
     <h2>1. 投标前需要注意哪些事项？</h2>
@@ -86,7 +86,7 @@
   <div class="clear"></div>
 </div>
 <!--底部内容开始-->
-<include file="Public:footer" />
+@include('home.Public.footer')
 <!--底部内容结束-->
 </body>
 </html>

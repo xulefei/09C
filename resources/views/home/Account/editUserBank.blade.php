@@ -3,7 +3,7 @@
     <head>
 
     @include('home.Public.header')
-    <link href="frontend/css/user.css" type="text/css" rel="stylesheet"/>
+    <link href="/frontend/css/user.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
         #TB_closeAjaxWindow{ width:48px; height:10px; overflow:hidden;}
     </style>
@@ -59,7 +59,7 @@
             </dl>
         </form>
     </div>
-    <script src="frontend/js/jquery.js" type="text/javascript"></script>
+    <script src="/frontend/js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {
             $("#province").change(function() {

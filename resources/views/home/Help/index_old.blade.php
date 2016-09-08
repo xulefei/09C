@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <include file="Public:header" />
-    <link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-	<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
+        @include('home.Public.header')
+    <link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+	<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<!--头部导航-->
-<include file="Public:main_nav" />
+    @include('home.Public.main_nav')
 <!--头部结束 --> 
     <!--导航栏开始-->
     <div class="daohanglan">
@@ -20,7 +20,7 @@
         <div class="left">
             <ul>
                 <volist name="news" id="vo"  >
-                    <li><a href="{:U('Help/index',array('id'=>$vo[id]))}">{$vo.type_name}</a></li>
+                    <li><a href=""></a></li>
                 </volist>
             </ul>
         </div>
@@ -30,19 +30,19 @@
             <div class="first">名词解释</div>
             <ul>
                 <volist name="tNews" id="vo" key="num" >
-                    <li><span class="help-title">{$num}. {$vo.title}</span>
+                    <li><span class="help-title"></span>
                         <dl class="help-content">
                             <dt>
-                            <dd>{$vo.content}</dd>
-                            <?php $n = 1; foreach($vo['son'] AS $key=>$v):?>
-                            <li><span>{$num}.{$n++}. {$v.title}</span>
+                            <dd>}</dd>
+
+                            <li><span></span>
                                 <dl>
                                     <dt>
-                                    <dd>{$v.content}</dd>
+                                    <dd></dd>
                                     </dt>
                                 </dl>
                             </li>		
-                            <?php endforeach;?>
+
                             </dt>
                         </dl>
                     </li>		
@@ -52,7 +52,7 @@
     </div>
     <div class="clear"></div>
     <!--右边栏结束-->
-<include file="Public:footer" />
+    @include('home.Public.footer')
 <script>
     $(function() {
         $('.help-content').hide();

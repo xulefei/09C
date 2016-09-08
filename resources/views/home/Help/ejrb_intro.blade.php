@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
 
-        <include file='Public:header'/>
-        <link href="__PUBLIC__/frontend/css/ebao_intro.css" type="text/css"  rel="stylesheet" />
+        @include('home.Public.header')
+        <link href="/frontend/css/ebao_intro.css" type="text/css"  rel="stylesheet" />
         <script>
 		 	var timeTask=setInterval(function(){
 		        var date=new Date();
@@ -25,8 +25,8 @@
 				 } );
 		    }
 		 </script>
-        <script src="__PUBLIC__/frontend/js/jquery1.42.min.js" type="text/javascript"></script>
-        <script src="__PUBLIC__/frontend/js/jquery.superslide.2.1.1.js"></script>
+        <script src="/frontend/js/jquery1.42.min.js" type="text/javascript"></script>
+        <script src="/frontend/js/jquery.superslide.2.1.1.js"></script>
         
         <style>
             .box04_br .cur{
@@ -35,7 +35,7 @@
         </style>
     </head>
     <body>
-        <include file='Public:main_nav'/>
+    @include('home.Public.main_nav')
         <!--头部内容结束--> 
         
         <!--轮换+收益表开始-->
@@ -75,9 +75,9 @@ $(".lunhuan").slide({ titCell:".lunhuan_but002 ul" , mainCell:".lunhuan_pic" , e
         <div id="content"> 
                <div class="sy_list">
                     <ul>
-                        <li class="sy_list_title png_fix"><?php echo date("Y-m-d",time())?></li>
-                        <li class="sy_list_lilv png_fix"><?php echo C('EJRB_LILV')*100;?></li>
-                        <li class="sy_list_but"><a href="{:U('login/index')}" class="eeb_tiyan_but png_fix"></a></li>
+                        <li class="sy_list_title png_fix"></li>
+                        <li class="sy_list_lilv png_fix"></li>
+                        <li class="sy_list_but"><a href="" class="eeb_tiyan_but png_fix"></a></li>
                     </ul>
                 </div>
                 
@@ -94,7 +94,7 @@ $(".lunhuan").slide({ titCell:".lunhuan_but002 ul" , mainCell:".lunhuan_pic" , e
                     <div class="eeb_sy_list_info" style="display:block;">
                         <ul>
                             <li>每日年化收益率</li>
-                            <li><?php echo C('EJRB_LILV')*100;?>%</li>
+                            <li>%</li>
                         </ul>
                     </div>
                     <div class="eeb_sy_list_con">
@@ -137,14 +137,14 @@ $(".lunhuan").slide({ titCell:".lunhuan_but002 ul" , mainCell:".lunhuan_pic" , e
                     <p>转入E额宝的金额会在二个工作日内得到确认（最短1小时，最长48小时）并开始享受收益；E额宝每日兑付收益，收益直接计入账户；已确认部分的金额在周末和节假日都有收益。</p>
                     <h2>E额宝的收益结算有什么规则？</h2>
                     <p>E额宝的收益每日结算，每天凌晨01:00左右前一天的收益到账。可以随时转出，实时到达金融宝账户余额，转出当天没有收益。金融宝账户余额可使用金融宝平台我要提现功能当日立即提出到银行。</p>
-                    <span><a href="{:U("Help/find7")}#sy_eebao">查看更多收益说明»</a></span> </div>
+                    <span><a href="#sy_eebao">查看更多收益说明»</a></span> </div>
                 <div class="clear"></div>
             </div>
             <!--余额宝受益结束--> 
             <!--余额宝保本开始-->
             <div class="eeb_baoben" id="guanggao04">
                 <h1>保本</h1>
-                <p>现金银行与保险推出的理财产品均属于不保本理财，也就是利率不固定，所购买的产品存在本金亏损情况，而E额宝 提供本金保障，用户利率和本金都能安全随时赎回。<span><a href="{:U("Help/find7")}#bb_eebao">更多说明»</a></span></p>
+                <p>现金银行与保险推出的理财产品均属于不保本理财，也就是利率不固定，所购买的产品存在本金亏损情况，而E额宝 提供本金保障，用户利率和本金都能安全随时赎回。<span><a href="#bb_eebao">更多说明»</a></span></p>
             </div>
             <!--余额宝保本结束--> 
             <!--余额宝高息开始-->
@@ -171,11 +171,11 @@ $(".lunhuan").slide({ titCell:".lunhuan_but002 ul" , mainCell:".lunhuan_pic" , e
                 <span class="cjwt_gdsm"><a href="{:U("Help/find7")}#cjwt_eebao">查看更多问题»</a></span> </div>
             <!--余额宝常见问题结束--> 
         </div>
-        <include file='Public:footer'/>
+    @include('home.Public.footer')
 
         
         <script type="text/javascript">
-            var sson = '<?php echo $_SESSION['uid'];?>'
+            var sson = ''
             $(function(){
                if(sson){
                    location.href="{:U('Fund/asset')}";

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<link href="frontend/css/index.css" type="text/css" rel="stylesheet" />
-<link href="frontend/css/base.css" type="text/css"  rel="stylesheet" />
-<link href="frontend/css/user.css" type="text/css"  rel="stylesheet" />
+<link href="/frontend/css/index.css" type="text/css" rel="stylesheet" />
+<link href="/frontend/css/base.css" type="text/css"  rel="stylesheet" />
+<link href="/frontend/css/user.css" type="text/css"  rel="stylesheet" />
 @include('home.Public.header')
 
 </head>

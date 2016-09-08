@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>账户安全信息</title>
-<link href="Frontend/css/base.css" rel="stylesheet" type="text/css" />
-<link href="Frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/Frontend/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/Frontend/css/user.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -183,7 +183,7 @@
 </div>
 <!--底部内容开始-->
 @include('home.Public.footer')
-<script src="frontend/js/anquan.js" language="javascript"></script>
+<script src="/frontend/js/anquan.js" language="javascript"></script>
 <!--底部内容结束-->
 
 

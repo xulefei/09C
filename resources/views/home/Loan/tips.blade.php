@@ -3,9 +3,9 @@
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width">
     </head>
     <script type="text/javascript">

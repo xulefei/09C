@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/user.css" type="text/css"  rel="stylesheet" />
+        <link href="/frontend/css/user.css" type="text/css"  rel="stylesheet" />
     </head>
 
     <body>
@@ -18,14 +18,14 @@
                             <dt><b></b>
                                 <span>
                                     
-                                    <a href="" target="_blank"><img src="frontend/images/ico/_icon.jpg" title="" alt=""/></a>
+                                    <a href="" target="_blank"><img src="/frontend/images/ico/_icon.jpg" title="" alt=""/></a>
                                 
                                 </span>
                             </dt>
                             <dd>
                                 <ul>
                                     <li>标的总额<span style="color:#F00; font-size:24px;">元</span></li>
-                                    <li>标的类型<span><img title="有抵押标" src="frontend/images/shiwu_tubiao.png" title="无抵押信用标" alt="无抵押信用标" src="frontend/images/xinyong_tubiao.png" style=" vertical-align:middle;"/></span></li>
+                                    <li>标的类型<span><img title="有抵押标" src="/frontend/images/shiwu_tubiao.png" title="无抵押信用标" alt="无抵押信用标" src="/frontend/images/xinyong_tubiao.png" style=" vertical-align:middle;"/></span></li>
                                 </ul>
                             </dd>
                             <dd>
@@ -48,7 +48,7 @@
                                             
                                             到期还本按月还息
                                             
-                                        </span><a href="#huankuanfangshi" title="还款期内，每月偿还同等数额的借款(包括本金和利息)" target="_blank"><img src="frontend/images/wenhao_info.gif"  title="了解更多"/></a></li>
+                                        </span><a href="#huankuanfangshi" title="还款期内，每月偿还同等数额的借款(包括本金和利息)" target="_blank"><img src="/frontend/images/wenhao_info.gif"  title="了解更多"/></a></li>
                                 </ul>
                             </dd>
                         </dl>
@@ -133,7 +133,7 @@
                     
                     
                     <div class="wenxingtishi_jk">
-                        <span><img src="frontend/images/yz_info_bg.gif" style="vertical-align:middle" title="温馨提示" alt="温馨提示"/>（投标后可查看更详细用户信息）</span>
+                        <span><img src="/frontend/images/yz_info_bg.gif" style="vertical-align:middle" title="温馨提示" alt="温馨提示"/>（投标后可查看更详细用户信息）</span>
                     </div>
                     <div class="xyjl_jrb">
                         <div class="tittle_jrb001"><b>信用记录</b></div>
@@ -169,8 +169,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="text-align:left"><a href="#jinrongbaorenzheng" target="_blank"><img src="frontend/images/ico/{$vo.auth_type}_icon.jpg" title="<"/></a></td>
-                                    <td><img src="frontend/images/yz_right_bg.gif"  style="vertical-align:middle" title="已认证"/></td>
+                                    <td style="text-align:left"><a href="#jinrongbaorenzheng" target="_blank"><img src="/frontend/images/ico/{$vo.auth_type}_icon.jpg" title="<"/></a></td>
+                                    <td><img src="/frontend/images/yz_right_bg.gif"  style="vertical-align:middle" title="已认证"/></td>
                                     <td></td>
                                     <td></td>
                                     <td><a href="" target="_blank" class="list_chakan_but"></a></td>
@@ -268,11 +268,11 @@
                 </div>
                 <div class="liuchengtu_jk">
                     <ul>
-                        <li><span>1.账户充值</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
-                        <li><span>2.挑选投资项目</span><img src="frontend/images/shuomingditu_icon.png" title="下一步" /></li>
-                        <li><span>3.投标后查看更多信息</span><img src="frontend/images/shuomingditu_icon.png" title="下一步" /></li>
-                        <li><span>4.有两个小时考虑时间是否放弃投标</span><img src="frontend/images/shuomingditu_icon.png" title="下一步" /></li>
-                        <li><span>5.等待借款人确认</span><img src="frontend/images/shuomingditu_icon.png" title="下一步" /></li>
+                        <li><span>1.账户充值</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>2.挑选投资项目</span><img src="/frontend/images/shuomingditu_icon.png" title="下一步" /></li>
+                        <li><span>3.投标后查看更多信息</span><img src="/frontend/images/shuomingditu_icon.png" title="下一步" /></li>
+                        <li><span>4.有两个小时考虑时间是否放弃投标</span><img src="/frontend/images/shuomingditu_icon.png" title="下一步" /></li>
+                        <li><span>5.等待借款人确认</span><img src="/frontend/images/shuomingditu_icon.png" title="下一步" /></li>
                         <li><span>6.轻松赚取收益</span></li>
                     </ul>
                 </div>

@@ -2,7 +2,7 @@
 <html>
     <head>
     @include('home.Public.header')
-    <link href="frontend/css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="/frontend/css/index.css" type="text/css" rel="stylesheet"/>
     <script>
         var timeTask = setInterval(function() {
             var date = new Date();
@@ -23,8 +23,8 @@
             });
         }
     </script>
-    <script src="frontend/js/jquery1.42.min.js" type="text/javascript"></script>
-    <script src="frontend/js/jquery.superslide.2.1.1.js"></script>
+    <script src="/frontend/js/jquery1.42.min.js" type="text/javascript"></script>
+    <script src="/frontend/js/jquery.superslide.2.1.1.js"></script>
 </head>
 <body>
     <!--头部导航-->            
@@ -81,10 +81,10 @@
             <h1>登陆金融宝</h1>
             <form action="" method="post">
                 <ul>
-                    <li><img src="frontend/images/login_name_bg.gif" alt="" title="用户名"/>
+                    <li><img src="/frontend/images/login_name_bg.gif" alt="" title="用户名"/>
                         <input type="text" class="denglu_srk" placeholder="用户名/邮箱/手机号" name="name"  style=" float:left"/>
                     </li>
-                    <li><img src="frontend/images/login_password_bg.gif" alt=""  title="密码"/>
+                    <li><img src="/frontend/images/login_password_bg.gif" alt=""  title="密码"/>
                         <input type="password" class="denglu_srk" placeholder="账号密码" name="pass"  style=" float:left"/>
                     </li>
                     <li><input placeholder="输入验证码" class="yanzhengma" name="verify"/><img src="" style=" margin-left:10px; vertical-align:middle;" title="验证码"/><b id="verify1"></b></li>
@@ -96,9 +96,9 @@
             
             <!---qq登录end-->
             <!--<div class="denglu_but_con1" style=" float:left; width:80px; height:25px; line-height:25px;  color:#FFF; margin-top:15px; margin-left:30px; padding-bottom:5px; padding-top:5px; background:#999; display:inline;">
-                <a href="javascript:toQzoneLogin()"><img src="__PUBLIC__/frontend/images/Connect_logo_7.png" alt="" class="png_fix" style="vertical-align:middle; margin-left:15px;"  title="QQ登陆"/></a></div>
+                <a href="javascript:toQzoneLogin()"><img src="__PUBLIC__//frontend/images/Connect_logo_7.png" alt="" class="png_fix" style="vertical-align:middle; margin-left:15px;"  title="QQ登陆"/></a></div>
             <div class="denglu_but_con2" style=" float:left; width:130px; height:25px; line-height:25px; vertical-align:middle; color:#FFF; margin-top:15px; padding-bottom:5px;padding-top:5px;background:#999;">
-                <a href="{:U('AlipayLogin/AlipayLogin')}"><img src="__PUBLIC__/frontend/images/ico/1BIvZpQVQT.png" alt="" class="png_fix" style="vertical-align:middle; margin-left:15px;" title="支付宝登陆"/></a></div>-->
+                <a href="{:U('AlipayLogin/AlipayLogin')}"><img src="__PUBLIC__//frontend/images/ico/1BIvZpQVQT.png" alt="" class="png_fix" style="vertical-align:middle; margin-left:15px;" title="支付宝登陆"/></a></div>-->
         </div>
         <div class="login_2 png_fix">
             <div class="login_2top">
@@ -162,7 +162,7 @@
         <table class="news_liebiao_con">   
             <voList name="news_list" id="vo"> 
                 <tr>
-                    <td><img src="frontend/images/ico/news.png" title="新闻" alt="新闻" /><a href="" target="_blank" title=""></a></td>
+                    <td><img src="/frontend/images/ico/news.png" title="新闻" alt="新闻" /><a href="" target="_blank" title=""></a></td>
                     <td class="day"></td>
                 </tr>
             </volist>

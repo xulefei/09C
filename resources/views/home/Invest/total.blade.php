@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <!--顶部导航-->

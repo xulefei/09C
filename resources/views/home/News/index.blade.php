@@ -3,9 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         @include('home.Public.header')
-        <link href="frontend/css/index.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/index.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <!--头部开始-->
@@ -20,7 +20,7 @@
                     <tr><td colspan="6">暂无新闻资讯信息</td></tr>  
                     <voList name="data_list" id="vo"> 
                         <tr>
-                            <td><img src="frontend/images/ico/news.png" title="新闻" alt="新闻" /><a href="news-.html" target="_blank" title=""></a></td>
+                            <td><img src="/frontend/images/ico/news.png" title="新闻" alt="新闻" /><a href="news-.html" target="_blank" title=""></a></td>
                             <td class="day"></td>
                         </tr>
                     </volist>

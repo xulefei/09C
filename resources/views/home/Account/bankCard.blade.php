@@ -3,8 +3,8 @@
     <head>
 
         @include('home.Public.header')
-        <link href="frontend/css/user.css" type="text/css" rel="stylesheet"/>
-        <link href="frontend/css/thickbox.css" type="text/css" rel="stylesheet"/>
+        <link href="/frontend/css/user.css" type="text/css" rel="stylesheet"/>
+        <link href="/frontend/css/thickbox.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
         <!--导航栏开始-->
@@ -32,7 +32,7 @@
                         </div>
                         <?php endforeach;?>
                         <a href="?placeValuesBeforeTB_=savedValues&TB_alert=true&height=540&width=650&modal=false" class=" thickbox"> <div class="yinhangka_kj">
-                            <div class="yianhangka_img"><img src="frontend/images/ico/add.jpg" title="添加银行卡"/></div>     
+                            <div class="yianhangka_img"><img src="/frontend/images/ico/add.jpg" title="添加银行卡"/></div>
                             <a href="#TB_alert=true?height=540&width=650&modal=false" class="thickbox">添加银行卡</a>
                         </div></a>
                         <!--右边栏结束-->
@@ -43,7 +43,7 @@
                               <div class="clear"></div>
         </div>
     @include('home.Public.footer')
-    <script language="javascript" type="text/javascript" src="frontend/js/thickbox-compressed.js"></script>
+    <script language="javascript" type="text/javascript" src="/frontend/js/thickbox-compressed.js"></script>
     <script type="text/javascript">
         $(function() {
             $('#cardId').mouseout(function() {

@@ -3,8 +3,8 @@
     <head>
         <title>身份认证</title>
         <meta charset="UTF-8">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width">
         <style type="text/css">
             #TB_closeAjaxWindow{ width:48px; height:10px; overflow:hidden;}
@@ -14,10 +14,10 @@
         <div id="myOnPageContent">
             <div class="touxiang_tc">
                 <dl>
-                    <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>身份认证<p>您上传的身份证扫描件需和您绑定的身份证一致，否则将无法通过认证。</p></dt>
+                    <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>身份认证<p>您上传的身份证扫描件需和您绑定的身份证一致，否则将无法通过认证。</p></dt>
                     <dd><b>认证说明：</b></dd>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请您上传您<span>本人身份证原件</span>的正、反两面照片。<a href="frontend/images/shili/shengfenzheng.jpg" target="_blank">查看示例</a></dd>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、本人手持身份证正面头部照（确保身份证上的信息没有被遮挡，避免证件与头部重叠）。<a href="frontend/images/shili/id_example_girl.jpg" target="_blank">查看示例</a></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请您上传您<span>本人身份证原件</span>的正、反两面照片。<a href="/frontend/images/shili/shengfenzheng.jpg" target="_blank">查看示例</a></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、本人手持身份证正面头部照（确保身份证上的信息没有被遮挡，避免证件与头部重叠）。<a href="/frontend/images/shili/id_example_girl.jpg" target="_blank">查看示例</a></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、请确认您上传的资料是清晰的、未经修改的数码照片（不可以是扫描图片）。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、图片的尺寸<span>小于1.5M。</span>格式为：<span>jpg、png、gif。</span></dd>
                     <dd><b>认证有效期：<span>永久。</span></b></dd>
@@ -40,7 +40,7 @@
                 <span>警告：</span> 金融宝是一个注重诚信的网络平台。如果我们发现您上传的资料是伪造或有人工修改痕迹，金融宝会将你加入系统黑名单，永久取消您在金融宝的借款资格。
             </div>
         </div>
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script language="JavaScript" src="common/js/idcard.js" ></script>
         <script type="text/javascript">
             $(function() {

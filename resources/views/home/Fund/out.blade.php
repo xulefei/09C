@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/eebao.css" type="text/css"  rel="stylesheet" />
+        <link href="/frontend/css/eebao.css" type="text/css"  rel="stylesheet" />
         <style>
             .box04_br .cur{
                 color:red;
@@ -15,8 +15,8 @@
         <div class="eeb_box_bg">
             <div class="eeb_jisuanqi">
                 <div class="jsq_top png_fix">
-                    <div class="jsq_topl"><img src="frontend/images/zhuanzhang_icon.png" class="png_fix"  style=" vertical-align:middle;" title="转账"/>&nbsp;E额宝拥有更高收益，安全可靠，请放心操作</div>
-                    <div class="jsq_topr"><img src="frontend/images/fanhui_icon.png"  class="png_fix" style=" vertical-align:middle;" title="返回"/><a href="" style="color:#FFF">&nbsp;返回</a></div>
+                    <div class="jsq_topl"><img src="/frontend/images/zhuanzhang_icon.png" class="png_fix"  style=" vertical-align:middle;" title="转账"/>&nbsp;E额宝拥有更高收益，安全可靠，请放心操作</div>
+                    <div class="jsq_topr"><img src="/frontend/images/fanhui_icon.png"  class="png_fix" style=" vertical-align:middle;" title="返回"/><a href="" style="color:#FFF">&nbsp;返回</a></div>
                     <div class="clear"></div>
                 </div>
                 <div class="jsq_bottom">
@@ -44,9 +44,9 @@
                     <div class="zhuanzhang_r">
                         <dl>
                             <dt>E额宝三大优势：</dt>
-                            <dd><img src="frontend/images/ggshouyi_icon.png"  style=" vertical-align:middle;" title="E额宝拥有更多收益"/>&nbsp;E额宝拥有更多收益</dd>
-                            <dd><img src="frontend/images/ggbaozhang_icon.png"  style=" vertical-align:middle;" title="E额宝安全更保障"/>&nbsp;E额宝安全更保障</dd>
-                            <dd><img src="frontend/images/ggtiexin_icon.png"  style=" vertical-align:middle;" title="E额宝服务更贴心"/>&nbsp;E额宝服务更贴心</dd>
+                            <dd><img src="/frontend/images/ggshouyi_icon.png"  style=" vertical-align:middle;" title="E额宝拥有更多收益"/>&nbsp;E额宝拥有更多收益</dd>
+                            <dd><img src="/frontend/images/ggbaozhang_icon.png"  style=" vertical-align:middle;" title="E额宝安全更保障"/>&nbsp;E额宝安全更保障</dd>
+                            <dd><img src="/frontend/images/ggtiexin_icon.png"  style=" vertical-align:middle;" title="E额宝服务更贴心"/>&nbsp;E额宝服务更贴心</dd>
                         </dl>
                     </div>
                     <div class="clear"></div>

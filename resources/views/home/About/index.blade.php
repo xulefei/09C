@@ -4,9 +4,9 @@
 @include('home.Public.header')
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>金融宝介绍-桂林金融宝众投借贷平台</title>
-<link href="frontend/css/index.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 @include('home.Public.main_nav')
@@ -51,7 +51,7 @@
 </ul>
     <h4>1.4. "风险备用金账户"资金管理原则</h4>
     <p>金融宝将审慎管理"风险备用金账户"资金，并就账户及资金使用情况对理财人进行定期（按季度/月）披露。具体披露方式及解释权归金融宝所有。</p>
-    <p class="fg_line">附表：《金融宝风险备用金账户-产品垫付规则明细表》<img src="frontend/images/ico/pingtaijieshao_1.jpg" alt="" title="产品垫付规则明细表"/>注：信用认证标中与部分渠道合作的产品风险金计提标准不适用上表规则，将根据合作渠道的具体情形单独设定。</p>
+    <p class="fg_line">附表：《金融宝风险备用金账户-产品垫付规则明细表》<img src="/frontend/images/ico/pingtaijieshao_1.jpg" alt="" title="产品垫付规则明细表"/>注：信用认证标中与部分渠道合作的产品风险金计提标准不适用上表规则，将根据合作渠道的具体情形单独设定。</p>
     <h2>2. 账户及信息安全保障</h2>
     <p>金融宝作为国内先进的P2P金融服务平台，不仅要为用户提供周到的金融服务，同时也有责任保障每位网站用户的账户以及信息安全。</p>
     <p>我们使用先进的技术方案、完善的权限管理，最大程度的对用户账户安全进行保护。</p>

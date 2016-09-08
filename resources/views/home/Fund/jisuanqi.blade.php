@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/base.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/eebao.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/base.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/eebao.css" rel="stylesheet" type="text/css" />
         <script src="backend/bui/js/jquery-1.8.1.min.js" type="text/javascript"></script>
         <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
     </head>
@@ -16,8 +16,8 @@
         <div class="eeb_box_bg">
             <div class="eeb_jisuanqi">
                 <div class="jsq_top">
-                    <div class="jsq_topl"><img src="frontend/images/jusuanqi_icon.png" class="png_fix" style="vertical-align:middle;"  title="模拟收益"/>&nbsp;E额宝模拟收益</div>
-                    <div class="jsq_topr"><img src="frontend/images/fanhui_icon.png" class="png_fix"  style=" vertical-align:middle;" title="返回"/><a href="{:U('Fund/asset')}" style="color:#FFF">&nbsp;返回</a></div>
+                    <div class="jsq_topl"><img src="/frontend/images/jusuanqi_icon.png" class="png_fix" style="vertical-align:middle;"  title="模拟收益"/>&nbsp;E额宝模拟收益</div>
+                    <div class="jsq_topr"><img src="/frontend/images/fanhui_icon.png" class="png_fix"  style=" vertical-align:middle;" title="返回"/><a href="{:U('Fund/asset')}" style="color:#FFF">&nbsp;返回</a></div>
                     <div class="clear"></div>
                 </div>
                 <div class="jsq_bottom">
@@ -30,7 +30,7 @@
                             <li><span>一个月可获收益：&nbsp;</span><b  id="fundmonth" >0.00</b>&nbsp;&nbsp;元</li>
                         </ul>
                     </div>
-                    <div class="jsq_br"><img src="frontend/images/Calculator.gif" style="margin-left:50px;" title="计算器"/></div>
+                    <div class="jsq_br"><img src="/frontend/images/Calculator.gif" style="margin-left:50px;" title="计算器"/></div>
                     <div class="clear"></div>
                 </div>
             </div>  

@@ -2,14 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>文章列表</title>
+<title>添加新闻分类</title>
 </head>
 <body>
-	帮助分类：<br/><br/><volist name="news" id="vo" >
-	<a href="{:U('NewList/index',array('id'=>$vo[id]))}">{$vo.type_name}</a>
-	 <p><br/></p>
-</volist>
-	
-	{$oneNews[0].title}
+<form action="" method="post">
+	<input type="text" name="typeName"  />
+	&nbsp;
+	<input type="submit" value="增加"/>
+</form>
 </body>
 </html>

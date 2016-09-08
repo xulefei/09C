@@ -6,16 +6,16 @@
 
 <title>金融宝</title>
 
-<link href="css/index.css" type="text/css" rel="stylesheet" />
-<link href="css/base.css" type="text/css"  rel="stylesheet" />
-<link href="css/user.css" type="text/css"  rel="stylesheet" />
+<link href="/css/index.css" type="text/css" rel="stylesheet" />
+<link href="/css/base.css" type="text/css"  rel="stylesheet" />
+<link href="/css/user.css" type="text/css"  rel="stylesheet" />
 
 <script src="js/jquery.js" type="text/javascript"> </script>
 
 </head>
 
 <body>
-<include file="Public:main_nav" />
+@include('home.Public.main_nav')
 <div class="yinying_jrb2"></div>
 <!--贷款中心开始-->
 <div class="zhutineirong">

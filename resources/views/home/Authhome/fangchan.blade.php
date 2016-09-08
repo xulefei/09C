@@ -4,9 +4,9 @@
         <title>金融宝认证页面</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="swfupload/swfupload.js"></script>
         <script type="text/javascript" src="swfupload/handlers.js"></script>
         <style type="text/css">
@@ -20,10 +20,10 @@
 
             <div class="touxiang_tc">
                 <dl>
-                    <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>房产认证<p>房产证明是证明借入者资产及还款能力的重要凭证。</p></dt>
+                    <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>房产认证<p>房产证明是证明借入者资产及还款能力的重要凭证。</p></dt>
                     <dd><b>认证说明：</b></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、请上传以下任意一项资料。</dd>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）房屋产权证明。<a href="frontend/images/shili/fangchanzheng.jpg" target="_blank">查看示例</a></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）房屋产权证明。<a href="/frontend/images/shili/fangchanzheng.jpg" target="_blank">查看示例</a></dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）购房合同+近3个月的还贷流水。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）购房发票+近3个月的还贷流水。</dd>
                     <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4）按揭合同+近3个月的还贷流水。</dd>

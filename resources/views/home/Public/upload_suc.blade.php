@@ -8,7 +8,7 @@
     <body>
         <div>上传成功！</div>
         <input type="hidden" value="{$paths}" name="paths" id="paths" />
-        <script src="__PUBLIC__/frontend/js/jquery.js" type="text/javascript"></script>
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(function() {
                 $('#paths', parent.document).val($("#paths").val()); 

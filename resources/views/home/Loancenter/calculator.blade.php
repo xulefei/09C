@@ -3,7 +3,7 @@
     <head>
 
         @include('home.Public.header')
-        <link href="__PUBLIC__/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+        <link href="__PUBLIC__//frontend/css/user.css" type="text/css"  rel="stylesheet" />
     </head>
 
     <body>
@@ -48,7 +48,7 @@
         </div>
         <!--理财计算器结束-->
       @include('home.Public.footer')
-        <script src="frontend/vendor/formatCurrency/formatCurrency.js" type="text/javascript"></script>
-        <script src="frontend/vendor/formatCurrency/i18n/jquery.formatCurrency.zh-CN.js" type="text/javascript"></script>
+        <script src="/frontend/vendor/formatCurrency/formatCurrency.js" type="text/javascript"></script>
+        <script src="/frontend/vendor/formatCurrency/i18n/jquery.formatCurrency.zh-CN.js" type="text/javascript"></script>
     </body>
 </html>

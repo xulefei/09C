@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>金融宝网站服务协议-桂林金融宝众投借贷平台</title>
-<link href="__PUBLIC__/frontend/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/base.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>

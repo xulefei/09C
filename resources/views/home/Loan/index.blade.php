@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         @include('home.Public.header')
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script>
-        <link href="frontend/css/thickbox.css" rel="stylesheet" type="text/css" />
-        <script src="frontend/js/thickbox-compressed.js" type="text/javascript"></script>
-        <script src="frontend/js/jquery.cookie.js" type="text/javascript"></script>
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
+        <link href="/frontend/css/thickbox.css" rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/thickbox-compressed.js" type="text/javascript"></script>
+        <script src="/frontend/js/jquery.cookie.js" type="text/javascript"></script>
     </head>
     <body>
         <!--顶部导航-->
@@ -63,11 +63,11 @@
                                         <tr>
                                             <td class="tl_left">
                                                 
-                                                <img src="frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
+                                                <img src="/frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
                                                 
-                                                <img src="frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
+                                                <img src="/frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
                                                 
-                                                <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
+                                                <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
                                                 <span><a href="" target="_blank" title="{$vo.title}"></a></span>
                                             </td>
                                             <td></td>
@@ -123,11 +123,11 @@
                                         <tr>
                                             <td class="tl_left">
                                                 
-                                                <img src="frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
+                                                <img src="/frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
                                                 
-                                                <img src="frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
+                                                <img src="/frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
                                                 
-                                                <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
+                                                <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
                                                 <span><a href="" target="_blank" title="{$loan.title}"></a></span>
                                             </td>
                                             <td></td>
@@ -181,11 +181,11 @@
                                             <tr>
                                                 <td class="tl_left">
                                                     
-                                                    <img src="frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
+                                                    <img src="/frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
                                                     
-                                                    <img src="frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
+                                                    <img src="/frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
                                                    
-                                                    <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
+                                                    <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
                                                     <span><a href="" target="_blank" title=""></a></span>
                                                 </td>
                                                 <td></td>
@@ -239,11 +239,11 @@
                                             <tr>
                                                 <td class="tl_left">
                                                    
-                                                    <img src="frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
+                                                    <img src="/frontend/images/shiwu_tubiao.png"  title="有抵押信用标"  class="png_fix"/>
                                                     
-                                                    <img src="frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
+                                                    <img src="/frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
                                                     
-                                                    <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
+                                                    <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
                                                     <span><a href="" target="_blank" title="">{</a></span>
                                                 </td>
                                                 <td></td>
@@ -296,24 +296,24 @@
                                             <th>
                                                 <a href="">借出时间
                                                     
-                                                        <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
                                                       
-                                                        <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
                                                   
                                                 </a></th>
                                             <th><a href="" >借款金额
                                                     
-                                                        <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
                                                         <else/>
-                                                        <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
                                                     </if>
                                                 </a>
                                             </th>
                                             <th><a href="" >借款利率
                                                     
-                                                        <img src="frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_clicked_down.gif" alt="借款时间降序" />
                                                         <else/>
-                                                        <img src="frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
+                                                        <img src="/frontend/images/tz_list_px_arrow_default.gif" alt="默认排序" />
                                                     </if>
                                                 </a></th>
                                             <th>状态</th>
@@ -330,7 +330,7 @@
                                                     <input type="hidden" value="" id="money" />
                                                     <input type="hidden" value="" id="bid" />
                                                     <td class="tl_left">
-                                                        <img  src="frontend/images/shiwu_tubiao.png"/>
+                                                        <img  src="/frontend/images/shiwu_tubiao.png"/>
                                                         <!--<a href="{:U('Repayment/index',array('id'=>$vo['id']))}>{$vo.u_username}</a>-->
                                                         <a href="#TB_alert=true?height=500&width=620&inlineId=myOnPageContent" class="thickbox" type="button" title=""></a>
                                                     </td>

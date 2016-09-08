@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <head>
-            <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-            <script src="frontend/js/jquery.js" type="text/javascript"></script>
+            <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+            <script src="/frontend/js/jquery.js" type="text/javascript"></script>
             <script type="text/javascript">
                 $(document).ready(function() {
                     $(".zj").click(function() {
@@ -70,13 +70,13 @@
                                         
                                                 <tr>
                                                     <td class="tl_left">
-                                                        <!--<if condition="($vo.type eq 2)"><img src="__PUBLIC__/frontend/images/shiwu_tubiao.png" /></if>-->
+                                                        <!--<if condition="($vo.type eq 2)"><img src="__PUBLIC__//frontend/images/shiwu_tubiao.png" /></if>-->
                                                         
-                                <img src="frontend/images/shiwu_tubiao.png"  title="有抵押信用标" alt="有抵押信用标"  class="png_fix"/>
+                                <img src="/frontend/images/shiwu_tubiao.png"  title="有抵押信用标" alt="有抵押信用标"  class="png_fix"/>
                                 
-                                <img src="frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
+                                <img src="/frontend/images/xinyong_tubiao.png"  title="无抵押信用标" alt="无抵押信用标"  class="png_fix"/>
                                 
-                                <img src="frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
+                                <img src="/frontend/images/quanbao_tubiao.png" title="平台承诺100%保本" alt="平台承诺100%保本" alt="平台承诺100%保本" class="png_fix" />
                                                         <span><a href=""></a></span>
                                                     </td>
                                                     <td></td>

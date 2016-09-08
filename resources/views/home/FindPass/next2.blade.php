@@ -6,10 +6,10 @@
         <!--头部开始-->
         @include('home.Public.header')
         <!--头部结束-->
-        <link href="frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/base.css" rel="stylesheet" type="text/css" />
-        <link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-        <script src="frontend/js/jquery.js" type="text/javascript"></script> 
+        <link href="/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/base.css" rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+        <script src="/frontend/js/jquery.js" type="text/javascript"></script>
     </head>
     <body>
         @include('home.Public.main_nav')

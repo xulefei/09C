@@ -3,8 +3,8 @@
     <head>
 
     @include('home.Public.header')
-    <link href="frontend/css/user.css" type="text/css"  rel="stylesheet" />
-    <link href="frontend/css/thickbox.css" rel="stylesheet" type="text/css" />
+    <link href="/frontend/css/user.css" type="text/css"  rel="stylesheet" />
+    <link href="/frontend/css/thickbox.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .J_view{ display:none;}
         .hide{ display:none}
@@ -34,7 +34,7 @@
             <div class="gerenxinxi_kj">
                 <div class="gerenxinxi_lkj">
                     <img src="" width="96px" height="96px"  title="头像"/> 
-                    <img src="frontend/images/myjrb_touxiang.jpg" width="96px" height="96px" title="头像"/> 
+                    <img src="/frontend/images/myjrb_touxiang.jpg" width="96px" height="96px" title="头像"/>
                     <!--头像修改-->
                     <p class="J_view tscg" style="width:96px; height:30px; line-height:30px; background-color:#3d89b4; " align="center"><a href="" class="thickbox" type="button" style="color:#fff">更改头像</a></p>
 
@@ -46,24 +46,24 @@
                             <li><span>真实姓名</span><span style="width:250px; text-align:left"></span><div class="renzheng_kj"></li>
                             <li><span>身份证号</span><span style="width:250px; text-align:left"></span><div class="renzheng_kj">
                                    
-                                    <img src="frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已认证"/>
+                                    <img src="/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已认证"/>
                                     已认证
                                     
-                                    <a href=""><img src="frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;"  title="去认证"/>去认证</a>
+                                    <a href=""><img src="/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;"  title="去认证"/>去认证</a>
 
                                     
 
                                 </div></li>
                             <li><span>手机号码</span><span></span><div class="renzheng_kj">
-                                    <img src="frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
+                                    <img src="/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
                                     已绑定
-                                    <a href=""><img src="frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
+                                    <a href=""><img src="/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
                                 </div></li>
                             <li><span>邮箱地址</span><span></span>
                                 <div class="renzheng_kj">
-                                    <img src="frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
+                                    <img src="/frontend/images/yz_right_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:5px;" title="已绑定"/>
                                     已绑定
-                                    <a href=""><img src="frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
+                                    <a href=""><img src="/frontend/images/yz_info_bg.gif" class="png_fix" style="vertical-align:middle; margin-right:9px;" title="去绑定"/>去绑定</a>
                                 </div></li>
                             <li><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span>
                                 <b class="info">
@@ -146,8 +146,8 @@
 <div class="clear"></div>
 </div>
 @include('home.Public.footer')
-<script src="frontend/js/thickbox-compressed.js" type="text/javascript"></script>
+<script src="/frontend/js/thickbox-compressed.js" type="text/javascript"></script>
 <script language="javascript
-" type="text/javascript" src="frontend/js/My97DatePicker/WdatePicker.js"></script>
+" type="text/javascript" src="/frontend/js/My97DatePicker/WdatePicker.js"></script>
 </body>
 </html>

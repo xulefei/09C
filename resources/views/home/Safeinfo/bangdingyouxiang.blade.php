@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="frontend/css/user.css" rel="stylesheet" type="text/css" />
-<link href="frontend/css/base.css" rel="stylesheet" type="text/css" />
-<script src="frontend/js/jquery.js" type="text/javascript"></script>
+<link href="/frontend/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/frontend/css/base.css" rel="stylesheet" type="text/css" />
+<script src="/frontend/js/jquery.js" type="text/javascript"></script>
         <style type="text/css">
 .wsz {
 	color:#a9a9a9

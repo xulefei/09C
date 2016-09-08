@@ -3,8 +3,8 @@
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
          
         <meta name="viewport" content="width=device-width">
         
@@ -16,7 +16,7 @@
         <div id="myOnPageContent">
             <div class="touxiang_tc">
                 <dl>
-                  <dt><img src="frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>视频认证</dt>
+                  <dt><img src="/frontend/images/shangchuan_icon.png" class="png_fix"  title="上传认证"/>视频认证</dt>
                   <dd><b>视频录制要求：</b></dd>
                   <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、您上传的视频必须是<span>真实有效的，</span>如若无效，则认证将无法通过。</dd>
                   <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、视频认证文件大小<span>不得超过50M。</span></dd>

@@ -3,7 +3,7 @@
     <head>
 
     @include('home.Public.header')
-    <link href="frontend/css/user.css" type="text/css" rel="stylesheet"/>
+    <link href="/frontend/css/user.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="http://union.tenpay.com/bankList/css_col3.css "/>
     <style>
       .long-logo ul li input{ vertical-align:bottom; margin-right:20px;}
@@ -31,25 +31,25 @@
                 　<div id="tenpayBankList" style=" margin-left:30px;"></div>
                  　<input type="hidden" name="bank_type_value" id="bank_type_value" value="0">
                 <!--                <ul>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="ICBC"  /><img alt="工商银行" src="__PUBLIC__/frontend/images/icbc.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="ABC"  /><img alt="农业银行" src="__PUBLIC__/frontend/images/bank_abc.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="BCM"  /><img alt="交通银行" src="__PUBLIC__/frontend/images/bank_bcom.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="BOC"  /> <img alt="中国银行" src="__PUBLIC__/frontend/images/bank_boc.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CCB"  /><img alt="建设银行" src="__PUBLIC__/frontend/images/bank_ccb.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CEB"  /><img alt="光大银行" src="__PUBLIC__/frontend/images/bank_ceb.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CIB "  /><img alt="兴业银行" src="__PUBLIC__/frontend/images/bank_cib.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="abc"  /><img alt="中信银行" src="__PUBLIC__/frontend/images/bank_citic.jpg" width="142" height="40" /></label></li>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CMB"  /><img alt="招商银行" src="__PUBLIC__/frontend/images/bank_cmb.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="ICBC"  /><img alt="工商银行" src="__PUBLIC__//frontend/images/icbc.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="ABC"  /><img alt="农业银行" src="__PUBLIC__//frontend/images/bank_abc.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="BCM"  /><img alt="交通银行" src="__PUBLIC__//frontend/images/bank_bcom.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="BOC"  /> <img alt="中国银行" src="__PUBLIC__//frontend/images/bank_boc.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CCB"  /><img alt="建设银行" src="__PUBLIC__//frontend/images/bank_ccb.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CEB"  /><img alt="光大银行" src="__PUBLIC__//frontend/images/bank_ceb.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CIB "  /><img alt="兴业银行" src="__PUBLIC__//frontend/images/bank_cib.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="abc"  /><img alt="中信银行" src="__PUBLIC__//frontend/images/bank_citic.jpg" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="CMB"  /><img alt="招商银行" src="__PUBLIC__//frontend/images/bank_cmb.jpg" width="142" height="40" /></label></li>
                                 </ul>-->
                 <!--                <div class="title">银联在线支付</div>    
                                 <ul>
-                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="unionpay" checked="checked"  /><img alt="银联在线" src="__PUBLIC__/frontend/images/unionpay_logo.gif" width="142" height="40" /></label></li>
+                                    <li><label><input name="bank" type="radio" class="biaodan_05" value="unionpay" checked="checked"  /><img alt="银联在线" src="__PUBLIC__//frontend/images/unionpay_logo.gif" width="142" height="40" /></label></li>
                                 </ul>-->
                 <div style="clear: both;"></div>
                 <div class="title">其他支付方式</div>    
                 <ul style="margin-left:25px;">
-                    <li><label><input name="bank_type" type="radio" class="biaodan_05" value="DEFAULT"  style="border:0"/><img alt="财付通" src="frontend/images/tenpay.jpg" width="142" height="40" title="财付通"/></label></li>
-                    <li><label><input name="bank_type" type="radio" class="biaodan_05" value="unionpay"  style="border:0"/><img alt="银联在线" src="frontend/images/unionpay_logo.gif" width="142" height="40" title="银联在线"/></label></li>
+                    <li><label><input name="bank_type" type="radio" class="biaodan_05" value="DEFAULT"  style="border:0"/><img alt="财付通" src="/frontend/images/tenpay.jpg" width="142" height="40" title="财付通"/></label></li>
+                    <li><label><input name="bank_type" type="radio" class="biaodan_05" value="unionpay"  style="border:0"/><img alt="银联在线" src="/frontend/images/unionpay_logo.gif" width="142" height="40" title="银联在线"/></label></li>
                 </ul>
             </div>
             <div class="chongzhijin_e">

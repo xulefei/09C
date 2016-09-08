@@ -5,11 +5,11 @@
         <div class="footer_con_left">
             <h1>合作机构</h1>
             <ul>
-                <li><a href="http://www.icbc.com.cn/icbc/" target="_blank"><img src="frontend/images/icon2.jpg" alt=""  title="工商银行"/></a></li>
-                <li><a href="http://www.pbc.gov.cn/" target="_blank"><img src="frontend/images/icon3.jpg" alt=""  title="" title="中国人民银行"/></a></li>
-                <li><a href="http://www.ccb.com/cn/home/" target="_blank"><img src="frontend/images/icon4.jpg" alt=""  title="建设银行"/></a></li>
-                <li><a href="http://www.boc.cn/" target="_blank"><img src="frontend/images/icon5.jpg" alt=""  title="中国银行"/></a></li>
-                <li><a href="http://www.abchina.com/cn/" target="_blank"><img src="frontend/images/icon6.jpg" alt=""  title="农业银行"/></a></li>
+                <li><a href="http://www.icbc.com.cn/icbc/" target="_blank"><img src="/frontend/images/icon2.jpg" alt=""  title="工商银行"/></a></li>
+                <li><a href="http://www.pbc.gov.cn/" target="_blank"><img src="/frontend/images/icon3.jpg" alt=""  title="" title="中国人民银行"/></a></li>
+                <li><a href="http://www.ccb.com/cn/home/" target="_blank"><img src="/frontend/images/icon4.jpg" alt=""  title="建设银行"/></a></li>
+                <li><a href="http://www.boc.cn/" target="_blank"><img src="/frontend/images/icon5.jpg" alt=""  title="中国银行"/></a></li>
+                <li><a href="http://www.abchina.com/cn/" target="_blank"><img src="/frontend/images/icon6.jpg" alt=""  title="农业银行"/></a></li>
             </ul>
             <h1>合作伙伴</h1>
             <ul>
@@ -45,5 +45,5 @@
         <div class="clear"></div>
     </div>
 </div>
-<script src="frontend/js/jquery.js" type="text/javascript"></script>
+<script src="/frontend/js/jquery.js" type="text/javascript"></script>
 

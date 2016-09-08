@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
-        <link href="frontend/css/base.css"  rel="stylesheet" type="text/css" />
+        <link href="/frontend/css/go_auth.css"  rel="stylesheet" type="text/css"/>
+        <link href="/frontend/css/base.css"  rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width">
     </head>
     <style>
@@ -29,7 +29,7 @@
                     </form>
                     <div class="jindutiao_03">&nbsp;</div>
                 </div>
-            <script src="frontend/js/jquery.js" type="text/javascript"></script>
+            <script src="/frontend/js/jquery.js" type="text/javascript"></script>
             <script language="JavaScript" src="common/js/idcard.js" ></script>
             <script type="text/javascript">
                 $(function() {

@@ -4,7 +4,7 @@
 
         @include('home.Public.header')
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="frontend/css/user.css" type="text/css"  rel="stylesheet" />
+        <link href="/frontend/css/user.css" type="text/css"  rel="stylesheet" />
     </head>
 
     <body>
@@ -20,7 +20,7 @@
                         <dd>
                             <ul>
                                 <li>标的总额<span style="color:#F00; font-size:24px;">元</span></li>
-                                <li>标的类型<span><img title="有抵押标" src="frontend/images/shiwu_tubiao.png"  title="无抵押信用标" alt="无抵押信用标" src="frontend/images/xinyong_tubiao.png"/></span></li>
+                                <li>标的类型<span><img title="有抵押标" src="/frontend/images/shiwu_tubiao.png"  title="无抵押信用标" alt="无抵押信用标" src="/frontend/images/xinyong_tubiao.png"/></span></li>
                             </ul>
                         </dd>
                         <dd>
@@ -46,7 +46,7 @@
                                         
                                         到期还本按月还息
                                 </span>
-                                    <a href="#" title="还款期内，每月偿还同等数额的借款(包括本金和利息)"><img src="frontend/images/wenhao_info.gif"  title="查看更多"/></a>
+                                    <a href="#" title="还款期内，每月偿还同等数额的借款(包括本金和利息)"><img src="/frontend/images/wenhao_info.gif"  title="查看更多"/></a>
                                 </li>
 
                             </ul>
@@ -113,11 +113,11 @@
 				
                 <div class="liuchengtu_jk">
                     <ul>
-                        <li><span>1.借款成功</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
-                        <li><span>2.查看下次还款日期</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
-                        <li><span>3.账户充值</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
-                        <li><span>4.于还款日期前点击还款</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
-                        <li><span>5.输入还款金额</span><img src="frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>1.借款成功</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>2.查看下次还款日期</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>3.账户充值</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>4.于还款日期前点击还款</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
+                        <li><span>5.输入还款金额</span><img src="/frontend/images/shuomingditu_icon.png"  title="下一步"/></li>
                         <li><span>6.当月还款成功</span></li>
                     </ul>
                 </div>

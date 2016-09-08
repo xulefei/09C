@@ -3,7 +3,7 @@
     <head>           
 
     @include('home.Public.header')
-    <link href="frontend/css/user.css" type="text/css" rel="stylesheet"/>
+    <link href="/frontend/css/user.css" type="text/css" rel="stylesheet"/>
     <style>
         .registerform li{padding-bottom:20px;}
         .Validform_checktip{margin-left:10px;}
@@ -66,8 +66,8 @@
             </dl>
         </form>
     </div>
-    <script src="frontend/js/jquery.js" type="text/javascript"></script>
-    <script src="frontend/js/validate_form.min.js" type="text/javascript"></script>
+    <script src="/frontend/js/jquery.js" type="text/javascript"></script>
+    <script src="/frontend/js/validate_form.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {
             $("#province").change(function() {
