@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <include file="Public:header" />
+    <link href="__PUBLIC__/frontend/css/lixuena_style.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/frontend/css/user.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!--头部导航-->
+<include file="Public:main_nav" />
+<!--头部结束 --> 
+    <!--导航栏开始-->
+    <div class="daohanglan">
+        <a href="index.html">首页</a> > <a href="help.html">帮助</a>
+    </div>
+    <!--导航栏结束-->
+    <div class="zhutineirong_bz">
+        <!--左边栏开始-->
+        <div class="left">
+            <ul>
+                <volist name="news" id="vo"  >
+                    <li><a href="{:U('Help/index',array('id'=>$vo[id]))}">{$vo.type_name}</a></li>
+                </volist>
+            </ul>
+        </div>
+        <!--左边栏结束-->
+        <!--右边栏开始-->
+        <div class="right">
+            <div class="first">名词解释</div>
+            <ul>
+                <volist name="tNews" id="vo" key="num" >
+                    <li><span class="help-title">{$num}. {$vo.title}</span>
+                        <dl class="help-content">
+                            <dt>
+                            <dd>{$vo.content}</dd>
+                            <?php $n = 1; foreach($vo['son'] AS $key=>$v):?>
+                            <li><span>{$num}.{$n++}. {$v.title}</span>
+                                <dl>
+                                    <dt>
+                                    <dd>{$v.content}</dd>
+                                    </dt>
+                                </dl>
+                            </li>		
+                            <?php endforeach;?>
+                            </dt>
+                        </dl>
+                    </li>		
+                </volist>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!--右边栏结束-->
+<include file="Public:footer" />
+<script>
+    $(function() {
+        $('.help-content').hide();
+        $(".help-title").click(function() {
+            $(this).next('.help-content').toggle();
+        });
+    });
+</script>
+</body>
+</html>
